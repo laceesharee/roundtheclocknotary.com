@@ -24,14 +24,14 @@ body { font-family: 'Raleway', sans-serif; background: #0d1b2e; color: #fff; ove
 
 .page-wrap { position: relative; z-index: 2; }
 
-/* ── HERO HEADER — light-to-transparent gradient, fades on scroll ── */
+/* ── HERO HEADER — light top gradient, fades on scroll ── */
 .hero-header {
   width: 100%;
   display: flex; align-items: center; justify-content: center;
   padding: 36px 40px 28px;
   background: linear-gradient(180deg,
-    rgba(255,255,255,0.12) 0%,
-    rgba(255,255,255,0.04) 60%,
+    rgba(255,255,255,0.15) 0%,
+    rgba(255,255,255,0.06) 55%,
     rgba(255,255,255,0.0) 100%);
   transition: opacity 0.3s ease;
 }
@@ -73,21 +73,23 @@ body { font-family: 'Raleway', sans-serif; background: #0d1b2e; color: #fff; ove
 }
 .step-btn-static img { width: 100%; height: auto; display: block; }
 
-/* ── TWO COLUMN ── */
+/* ── TWO COLUMN — outer wrapper rounded + dark ── */
 .main-content {
   width: 100%; max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 48px rgba(0,0,0,0.6);
 }
 
-/* ── ACCORDION — gold tint ── */
+/* ── ACCORDION — darker, more opaque ── */
 .accordion-panel {
-  background: rgba(201,168,76,0.13);
+  background: rgba(10, 20, 38, 0.82);
   border-right: 1px solid rgba(201,168,76,0.25);
-  border-radius: 0 0 0 16px;
   overflow: hidden;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
 }
 .accordion-item { border-bottom: 1px solid rgba(201,168,76,0.2); }
 .accordion-item:last-child { border-bottom: none; }
@@ -110,13 +112,12 @@ body { font-family: 'Raleway', sans-serif; background: #0d1b2e; color: #fff; ove
 .accordion-inner ul li { padding: 2px 0 2px 14px; position: relative; }
 .accordion-inner ul li::before { content: '·'; position: absolute; left: 0; color: #c9a84c; }
 
-/* ── REVIEWS — gold tint ── */
+/* ── REVIEWS — darker, more opaque ── */
 .reviews-panel {
-  background: rgba(201,168,76,0.10);
+  background: rgba(10, 20, 38, 0.78);
   padding: 24px 24px 28px;
   display: flex; flex-direction: column; gap: 16px;
-  border-radius: 0 0 16px 0;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
 }
 .review-card {
   background: rgba(201,168,76,0.08);
@@ -165,29 +166,34 @@ footer {
 
 .footer-divider { width: 60px; height: 1px; background: rgba(201,168,76,0.35); margin: 0 auto 32px; }
 
-.footer-logo { height: 70px; margin-bottom: 20px; opacity: 0.9; }
-.footer-social { display: flex; gap: 12px; justify-content: center; margin-bottom: 20px; }
+.footer-logo { height: 52px; opacity: 0.9; flex-shrink: 0; }
+.footer-social { display: flex; gap: 10px; align-items: center; }
 .social-btn {
   display: flex; align-items: center; justify-content: center;
-  width: 36px; height: 36px;
+  width: 32px; height: 32px;
   border: 1px solid rgba(201,168,76,0.5);
   border-radius: 8px;
   color: rgba(255,255,255,0.7);
   text-decoration: none;
-  font-size: 0.85rem; font-weight: 700;
+  font-size: 0.82rem; font-weight: 700;
   transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
 .social-btn:hover { border-color: #c9a84c; color: #c9a84c; background: rgba(201,168,76,0.1); }
-.footer-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
-.footer-links a { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(201,168,76,0.75); text-decoration: none; transition: color 0.2s; }
+.footer-links { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+.footer-links a { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(201,168,76,0.75); text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: #c9a84c; }
-.footer-copy { font-size: 0.65rem; color: rgba(255,255,255,0.28); line-height: 1.9; letter-spacing: 0.04em; }
+.footer-copy { font-size: 0.62rem; color: rgba(255,255,255,0.28); letter-spacing: 0.04em; line-height: 1.5; }
+.footer-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px;
+  max-width: 1200px; margin: 0 auto;
+}
 </style>
 </head>
 <body>
 
 <!-- VIDEO BG -->
-<video class="video-bg" autoplay muted loop playsinline oncanplay="this.playbackRate=0.5;">
+<video class="video-bg" autoplay muted loop playsinline oncanplay="this.playbackRate=0.25;">
   <source src="https://laceesharee.github.io/rtc-links/Courthouse_at_dusk_timelapse_9fced4f026.mp4" type="video/mp4">
 </video>
 <div class="video-overlay"></div>
@@ -426,21 +432,20 @@ footer {
 
     <div class="footer-divider"></div>
 
-    <img src="logo__5_.png" alt="Round The Clock Notary" class="footer-logo">
-    <div class="footer-social">
-      <a href="https://www.facebook.com/roundtheclocknotary" target="_blank" class="social-btn">f</a>
-      <a href="https://www.linkedin.com/company/roundtheclocknotary" target="_blank" class="social-btn">in</a>
+    <div class="footer-bar">
+      <img src="logo__5_.png" alt="Round The Clock Notary" class="footer-logo">
+      <div class="footer-social">
+        <a href="https://www.facebook.com/roundtheclocknotary" target="_blank" class="social-btn">f</a>
+        <a href="https://www.linkedin.com/company/roundtheclocknotary" target="_blank" class="social-btn">in</a>
+      </div>
+      <div class="footer-links">
+        <a href="https://laceesharee.github.io/rtc-notary-calculator/">Free Quote</a>
+        <a href="https://roundtheclocknotaryhoodcounty.as.me/">Book Now</a>
+        <a href="tel:8175127217">817-512-7217</a>
+        <a href="mailto:info@roundtheclocknotary.com">Email Us</a>
+      </div>
+      <p class="footer-copy">© 2026 Round The Clock Notary · ByPatience LLC · Hood County, TX<br>Not an attorney. Not legal advice. Licensed · Bonded · Insured.</p>
     </div>
-    <div class="footer-links">
-      <a href="https://laceesharee.github.io/rtc-notary-calculator/">Free Quote</a>
-      <a href="https://roundtheclocknotaryhoodcounty.as.me/">Book Now</a>
-      <a href="tel:8175127217">817-512-7217</a>
-      <a href="/cdn-cgi/l/email-protection#86efe8e0e9c6f4e9f3e8e2f2eee3e5eae9e5ede8e9f2e7f4ffa8e5e9eb">Email Us</a>
-    </div>
-    <p class="footer-copy">
-      © 2026 Round The Clock Notary · ByPatience LLC · Hood County, Texas<br>
-      Not an attorney. Not legal advice. Licensed · Bonded · Insured.
-    </p>
   </footer>
 
 </div>
