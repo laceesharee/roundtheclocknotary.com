@@ -49,7 +49,7 @@ body { font-family: 'Raleway', sans-serif; background: #0d1b2e; color: #fff; ove
   padding: 0 0 18px;
 }
 
-/* ── BUTTONS — full width, transparent bg ── */
+/* ── BUTTONS — full width transparent CSS pills ── */
 .steps-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -57,21 +57,48 @@ body { font-family: 'Raleway', sans-serif; background: #0d1b2e; color: #fff; ove
   max-width: 1200px;
   margin: 0 auto;
   background: transparent;
+  gap: 12px;
+  padding: 0 12px 20px;
 }
 .step-btn {
-  display: block; text-decoration: none;
-  transition: transform 0.2s, filter 0.2s;
+  display: flex; align-items: center; justify-content: center;
+  gap: 14px;
+  text-decoration: none;
+  background: transparent;
+  border: 2px solid #c9a84c;
+  border-radius: 60px;
+  padding: 18px 28px;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
   cursor: pointer;
+  box-shadow: 0 0 18px rgba(201,168,76,0.2), inset 0 0 18px rgba(201,168,76,0.05);
 }
-.step-btn:hover { transform: translateY(-2px); filter: brightness(1.12); }
-.step-btn img { width: 100%; height: auto; display: block; }
-
-/* Sign & Seal — no interaction */
+.step-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(201,168,76,0.08);
+  box-shadow: 0 0 28px rgba(201,168,76,0.4), inset 0 0 24px rgba(201,168,76,0.1);
+}
 .step-btn-static {
-  display: block;
+  display: flex; align-items: center; justify-content: center;
+  gap: 14px;
+  background: transparent;
+  border: 2px solid #c9a84c;
+  border-radius: 60px;
+  padding: 18px 28px;
   cursor: default;
+  box-shadow: 0 0 18px rgba(201,168,76,0.2), inset 0 0 18px rgba(201,168,76,0.05);
 }
-.step-btn-static img { width: 100%; height: auto; display: block; }
+.btn-icon {
+  font-size: 1.8rem; line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
+.btn-label {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1rem, 1.8vw, 1.5rem);
+  font-weight: 700; letter-spacing: 0.08em;
+  color: #c9a84c;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  white-space: nowrap;
+}
 
 /* ── TWO COLUMN ── */
 .main-content {
@@ -205,13 +232,16 @@ footer {
   <!-- 3 BUTTONS -->
   <div class="steps-row">
     <a href="https://laceesharee.github.io/rtc-notary-calculator/" class="step-btn">
-      <img src="now.png" alt="Free Quote">
+      <span class="btn-icon">🕐</span>
+      <span class="btn-label">Free Quote</span>
     </a>
     <a href="https://roundtheclocknotaryhoodcounty.as.me/schedule/233e6be1" class="step-btn">
-      <img src="now__2_.png" alt="Book Now">
+      <span class="btn-icon">📋</span>
+      <span class="btn-label">Book Now</span>
     </a>
     <div class="step-btn-static">
-      <img src="now__5_.png" alt="Sign & Seal">
+      <span class="btn-icon">🪶</span>
+      <span class="btn-label">Sign &amp; Seal</span>
     </div>
   </div>
 
