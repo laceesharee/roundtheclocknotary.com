@@ -37,11 +37,11 @@ body { font-family: 'Raleway', sans-serif; background: #0d1b2e; color: #fff; ove
   white-space: nowrap;
 }
 .trust-pill .pill-dot { color: #c9a84c; font-size: 0.5rem; opacity: 0.8; }
-.steps-row { display: grid; grid-template-columns: 1fr 1fr 1fr; width: 100%; max-width: 1200px; margin: 0 auto; background: rgba(10,20,38,0.82); backdrop-filter: blur(8px); }
-.step-btn { display: block; text-decoration: none; transition: transform 0.2s, filter 0.2s; cursor: pointer; }
+.steps-row { display: grid; grid-template-columns: 1fr 1fr 1fr; width: 100%; max-width: 1200px; margin: 0 auto; background: transparent; }
+.step-btn { display: block; text-decoration: none; transition: transform 0.2s, filter 0.2s; cursor: pointer; background: rgba(10,20,38,0.55); border-radius: 14px; overflow: hidden; }
 .step-btn:hover { transform: translateY(-2px); filter: brightness(1.12); }
 .step-btn img { width: 100%; height: auto; display: block; }
-.step-btn-static { display: block; cursor: default; }
+.step-btn-static { display: block; cursor: default; background: rgba(10,20,38,0.55); border-radius: 14px; overflow: hidden; }
 .step-btn-static img { width: 100%; height: auto; display: block; }
 .main-content { width: 100%; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 48px rgba(0,0,0,0.6); }
 .accordion-panel { background: rgba(10,20,38,0.82); border-right: 1px solid rgba(201,168,76,0.25); overflow: hidden; backdrop-filter: blur(8px); }
