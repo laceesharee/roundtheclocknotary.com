@@ -37,14 +37,14 @@ body { font-family: 'Raleway', sans-serif; background: #0d1b2e; color: #fff; ove
   white-space: nowrap;
 }
 .trust-pill .pill-dot { color: #c9a84c; font-size: 0.5rem; opacity: 0.8; }
-.steps-row { display: flex; justify-content: center; align-items: center; gap: 12px; width: 100%; max-width: 1200px; margin: 0 auto; background: transparent; flex-wrap: wrap; padding: 8px 16px; }
-.step-btn { display: inline-block; text-decoration: none; transition: transform 0.2s, filter 0.2s; cursor: pointer; flex: 0 1 auto; }
+.steps-row { display: grid; grid-template-columns: 1fr 1fr 1fr; width: 100%; max-width: 1200px; margin: 0 auto; background: transparent; }
+.step-btn { display: block; text-decoration: none; transition: transform 0.2s, filter 0.2s; cursor: pointer; }
 .step-btn:hover { transform: translateY(-2px); filter: brightness(1.12); }
-.step-btn img { width: auto; max-width: 380px; height: 80px; display: block; }
-.step-btn-static { display: inline-block; cursor: default; flex: 0 1 auto; }
-.step-btn-static img { width: auto; max-width: 380px; height: 80px; display: block; }
-.main-content { width: 100%; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 48px rgba(0,0,0,0.6); }
-.accordion-panel { background: rgba(10,20,38,0.82); border-right: 1px solid rgba(201,168,76,0.25); overflow: hidden; backdrop-filter: blur(8px); }
+.step-btn img { width: 100%; height: auto; display: block; }
+.step-btn-static { display: block; cursor: default; }
+.step-btn-static img { width: 100%; height: auto; display: block; }
+.main-content { width: 100%; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.accordion-panel { background: rgba(10,20,38,0.82); border: 1px solid rgba(201,168,76,0.25); border-radius: 16px; overflow: hidden; backdrop-filter: blur(8px); box-shadow: 0 8px 48px rgba(0,0,0,0.6); }
 .accordion-item { border-bottom: 1px solid rgba(201,168,76,0.2); }
 .accordion-item:last-child { border-bottom: none; }
 .accordion-trigger { width: 100%; background: none; border: none; display: flex; justify-content: space-between; align-items: center; padding: 18px 28px; cursor: pointer; gap: 12px; text-align: left; }
@@ -63,7 +63,7 @@ body { font-family: 'Raleway', sans-serif; background: #0d1b2e; color: #fff; ove
 .accordion-inner ul { list-style: none; padding: 0; }
 .accordion-inner ul li { padding: 2px 0 2px 14px; position: relative; }
 .accordion-inner ul li::before { content: '\00b7'; position: absolute; left: 0; color: #c9a84c; }
-.reviews-panel { background: rgba(10,20,38,0.78); padding: 24px 24px 28px; display: flex; flex-direction: column; gap: 16px; backdrop-filter: blur(8px); }
+.reviews-panel { background: rgba(10,20,38,0.78); padding: 24px 24px 28px; display: flex; flex-direction: column; gap: 16px; backdrop-filter: blur(8px); border: 1px solid rgba(201,168,76,0.25); border-radius: 16px; box-shadow: 0 8px 48px rgba(0,0,0,0.6); }
 .review-card { background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.25); border-radius: 12px; padding: 18px 20px; }
 .review-stars { color: #c9a84c; font-size: 0.88rem; margin-bottom: 8px; letter-spacing: 3px; }
 .review-text { font-family: 'EB Garamond', serif; font-size: 1rem; line-height: 1.72; color: rgba(255,255,255,0.88); margin-bottom: 10px; }
