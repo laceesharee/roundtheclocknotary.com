@@ -92,23 +92,65 @@ footer { border-top: 1px solid rgba(201,168,76,0.15); padding: 32px 24px 20px; t
 .accordion-inner a { color: #c9a84c; }
 @media (max-width: 768px) {
   body { overflow-x: hidden; }
-  .hero-header { padding: 16px 12px 12px; }
-  .hero-header img { height: 120px !important; max-width: 100% !important; }
+
+  /* HERO */
+  .hero-header { padding: 20px 16px 12px; }
+  .hero-header img { height: 140px !important; max-width: 90% !important; }
+
+  /* TRUST PILL */
   .trust-pill { font-size: 0.6rem; padding: 7px 14px; letter-spacing: 0.1em; white-space: normal; text-align: center; }
-  .steps-row { display: flex !important; flex-direction: column !important; align-items: center !important; gap: 8px !important; padding: 8px 16px !important; max-width: 100% !important; }
-  .step-btn, .step-btn-static { width: 90% !important; max-width: 360px !important; }
-  .step-btn img, .step-btn-static img { width: 100% !important; height: auto !important; }
-  .main-content { display: flex !important; flex-direction: column !important; gap: 12px !important; margin: 0 8px !important; max-width: 100% !important; }
+
+  /* BUTTONS */
+  .steps-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 8px 24px !important;
+    max-width: 100% !important;
+  }
+  .step-btn {
+    width: 85% !important;
+    max-width: 320px !important;
+  }
+  .step-btn img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  /* Hide Sign & Seal on mobile */
+  .step-btn-static { display: none !important; }
+
+  /* MAIN CONTENT — reviews first, then accordion */
+  .main-content {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    gap: 12px !important;
+    margin: 0 12px !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
   .accordion-panel { border-radius: 12px !important; width: 100% !important; }
   .reviews-panel { border-radius: 12px !important; width: 100% !important; }
-  .badges-grid { gap: 16px; }
-  .badge-item { width: 76px; }
-  .badge-item img { width: 54px; height: 54px; }
-  .badge-title { font-size: 0.55rem; }
-  .badge-sub { font-size: 0.5rem; }
+
+  /* Accordion sizing */
+  .acc-title { font-size: 0.95rem !important; }
+  .accordion-trigger { padding: 14px 18px !important; }
+  .accordion-inner { padding: 4px 18px 20px !important; font-size: 0.95rem !important; }
+
+  /* PHOTO CREDIT */
+  .photo-section { padding: 8px 12px; }
+
+  /* BADGES */
+  .badges-grid { gap: 14px; }
+  .badge-item { width: 72px; }
+  .badge-item img { width: 52px; height: 52px; }
+  .badge-title { font-size: 0.52rem; }
+  .badge-sub { font-size: 0.48rem; }
+
+  /* FOOTER */
   .footer-links { flex-direction: column; gap: 12px; align-items: center; }
   .footer-social { gap: 16px; }
-  .photo-section { padding: 8px 12px; }
+  .footer-copy { font-size: 0.58rem; padding: 0 12px; }
 }
 </style>
 </head>
@@ -271,7 +313,7 @@ footer { border-top: 1px solid rgba(201,168,76,0.15); padding: 32px 24px 20px; t
             <p>Mobile notary service traveling to the client location &#8212; supporting homebound clients, assisted living, hospitals, and hospice settings.</p>
             <h4>Contact</h4>
             <p>Round The Clock Notary &middot; ByPatience LLC<br>
-            roundtheclocknotary@gmail.com &middot; 817-512-7217<br>
+            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="81f3eef4efe5f5e9e4e2edeee2eaefeef5e0f3f8c1e6ece0e8edafe2eeec">[email&#160;protected]</a> &middot; 817-512-7217<br>
             Rev. 03/2026</p>
           </div>
         </div>
@@ -336,7 +378,7 @@ footer { border-top: 1px solid rgba(201,168,76,0.15); padding: 32px 24px 20px; t
       <a href="https://laceesharee.github.io/quote-booking/">Free Quote</a>
       <a href="https://laceesharee.github.io/quote-booking/">Book Now</a>
       <a href="tel:8175127217">817-512-7217</a>
-      <a href="mailto:roundtheclocknotary@gmail.com">Email Us</a>
+      <a href="/cdn-cgi/l/email-protection#e2908d978c86968a87818e8d81898c8d9683909ba2858f838b8ecc818d8f">Email Us</a>
     </div>
     <div class="footer-social">
       <a href="https://www.facebook.com/roundtheclocknotary" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Round The Clock Notary on Facebook">
@@ -350,22 +392,9 @@ footer { border-top: 1px solid rgba(201,168,76,0.15); padding: 32px 24px 20px; t
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 document.querySelectorAll('.accordion-trigger').forEach(function(btn) {
   btn.addEventListener('click', function() {
     var item = btn.closest('.accordion-item');
     var isOpen = item.classList.contains('open');
-    document.querySelectorAll('.accordion-item.open').forEach(function(i) {
-      i.classList.remove('open');
-      i.querySelector('.accordion-trigger').setAttribute('aria-expanded', 'false');
-    });
-    if (!isOpen) {
-      item.classList.add('open');
-      btn.setAttribute('aria-expanded', 'true');
-    }
-  });
-});
-</script>
-
-</body>
-</html>
+    document.querySelectorAll('.accordion-item.open').f
