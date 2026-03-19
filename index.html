@@ -3,1697 +3,418 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Round the Clock Notary — Free Quote</title>
-<link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/round_clock_favicon_64.png">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Round The Clock Notary — Hood County, TX</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:wght@400&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --navy:#0e1b3a;--navy-mid:#1a2d5a;--gold:#c9a84c;--gold-bright:#e8c96a;--gold-pale:#f0dfa0;
-  --cream:#f8f3e8;--cream-dark:#ede5d0;--white:#fff;--muted:#6b7280;--border:#cfc0a0;
-  --green:#1a6644;--red:#8b1f2f;--text:#0e1b3a;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Raleway', sans-serif; background: #0d1b2e; color: #fff; overflow-x: hidden; }
+.skip-link { position: absolute; top: -40px; left: 0; background: #c9a84c; color: #0d1b2e; padding: 8px 16px; font-weight: 700; font-size: 0.85rem; z-index: 9999; text-decoration: none; border-radius: 0 0 8px 0; transition: top 0.2s; }
+.skip-link:focus { top: 0; }
+.video-bg { position: fixed; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; pointer-events: none; }
+.page-wrap { position: relative; z-index: 2; }
+.hero-header { width: 100%; display: flex; align-items: center; justify-content: center; padding: 40px 40px 24px; overflow: visible; background: linear-gradient(180deg, rgba(255,255,255,0.50) 0%, rgba(255,255,255,0.18) 55%, rgba(255,255,255,0.0) 100%); }
+.hero-header img { height: 250px; max-width: 800px; object-fit: contain; }
+.van-strip { width: 100%; overflow: hidden; height: 72px; position: relative; pointer-events: none; }
+.van-strip img { position: absolute; height: 64px; width: auto; bottom: 4px; animation: vanCruise 36s linear infinite; }
+@keyframes vanCruise { 0% { left: -120px; } 100% { left: 110%; } }
+.trust-bar { display: flex; align-items: center; justify-content: center; padding: 0 0 18px; }
+.trust-pill {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 10px 28px;
+  border: 1.5px solid rgba(201,168,76,0.6);
+  border-radius: 999px;
+  background: rgba(8,15,32,0.35);
+  backdrop-filter: blur(6px);
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.72rem, 1.2vw, 0.95rem);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: #c9a84c;
+  white-space: nowrap;
 }
-body{font-family:"DM Sans",sans-serif;background:var(--cream);color:var(--text);min-height:100vh}
-.gold-rule{height:2px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold-bright),var(--gold),transparent)}
+.trust-pill .pill-dot { color: #c9a84c; font-size: 0.5rem; opacity: 0.8; }
+.steps-row { display: grid; grid-template-columns: 1fr 1fr 1fr; width: 100%; max-width: 1200px; margin: 0 auto; background: transparent; }
+.step-btn { display: block; text-decoration: none; transition: transform 0.2s, filter 0.2s; cursor: pointer; }
+.step-btn:hover { transform: translateY(-2px); filter: brightness(1.12); }
+.step-btn img { width: 100%; height: auto; display: block; }
+.step-btn-static { display: block; cursor: default; }
+.step-btn-static img { width: 100%; height: auto; display: block; }
+.main-content { width: 100%; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.accordion-panel { background: rgba(10,20,38,0.82); border: 1px solid rgba(201,168,76,0.25); border-radius: 16px; overflow: hidden; backdrop-filter: blur(8px); box-shadow: 0 8px 48px rgba(0,0,0,0.6); }
+.accordion-item { border-bottom: 1px solid rgba(201,168,76,0.2); }
+.accordion-item:last-child { border-bottom: none; }
+.accordion-trigger { width: 100%; background: none; border: none; display: flex; justify-content: space-between; align-items: center; padding: 18px 28px; cursor: pointer; gap: 12px; text-align: left; }
+.accordion-trigger:hover { background: rgba(201,168,76,0.08); }
+.accordion-trigger:focus-visible { outline: 2px solid #c9a84c; outline-offset: -2px; }
+.acc-title { font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 700; color: rgba(255,255,255,0.95); letter-spacing: 0.05em; }
+.acc-plus { font-size: 1.1rem; color: rgba(255,255,255,0.55); transition: transform 0.3s; flex-shrink: 0; }
+.accordion-item.open .acc-plus { transform: rotate(45deg); }
+.accordion-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.accordion-item.open .accordion-body { max-height: 6000px; }
+.accordion-inner { padding: 4px 28px 24px; font-family: 'EB Garamond', serif; font-size: 1rem; line-height: 1.82; color: rgba(255,255,255,0.85); }
+.accordion-inner h4 { font-family: 'Raleway', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #c9a84c; margin: 16px 0 4px; }
+.accordion-inner h4:first-child { margin-top: 0; }
+.accordion-inner p { margin-bottom: 10px; }
+.accordion-inner ul { list-style: none; padding: 0; }
+.accordion-inner ul li { padding: 2px 0 2px 14px; position: relative; }
+.accordion-inner ul li::before { content: '\00b7'; position: absolute; left: 0; color: #c9a84c; }
+.reviews-panel { background: rgba(10,20,38,0.78); padding: 24px 24px 28px; display: flex; flex-direction: column; gap: 16px; backdrop-filter: blur(8px); border: 1px solid rgba(201,168,76,0.25); border-radius: 16px; box-shadow: 0 8px 48px rgba(0,0,0,0.6); }
+.review-card { background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.25); border-radius: 12px; padding: 18px 20px; }
+.review-stars { color: #c9a84c; font-size: 0.88rem; margin-bottom: 8px; letter-spacing: 3px; }
+.review-text { font-family: 'EB Garamond', serif; font-size: 1rem; line-height: 1.72; color: rgba(255,255,255,0.88); margin-bottom: 10px; }
+.review-attr { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.38); text-align: right; }
+.photo-section { position: relative; width: 100%; min-height: 80px; display: flex; align-items: flex-end; justify-content: flex-end; padding: 12px 16px; }
+.photo-credit-wrap { display: flex; align-items: center; gap: 8px; }
+.photo-credit-wrap a { text-decoration: none; display: flex; align-items: center; }
+.photo-sig { height: 32px; width: auto; opacity: 0.65; transition: opacity 0.2s; }
+.photo-sig:hover { opacity: 1; }
+.photo-credit-text { font-size: 0.6rem; color: rgba(255,255,255,0.35); letter-spacing: 0.08em; font-style: italic; text-decoration: none; transition: color 0.2s; }
+.photo-credit-text:hover { color: #c9a84c; }
+footer { border-top: 1px solid rgba(201,168,76,0.15); padding: 32px 24px 20px; text-align: center; background: rgba(13,27,46,0.62); backdrop-filter: blur(8px); }
+.badges-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; max-width: 1100px; margin: 0 auto 20px; }
+.badge-item { display: flex; flex-direction: column; align-items: center; gap: 8px; width: 100px; text-align: center; }
+.badge-item img { width: 72px; height: 72px; object-fit: contain; filter: drop-shadow(0 4px 12px rgba(201,168,76,0.3)); transition: transform 0.2s, filter 0.2s; }
+.badge-item:hover img { transform: scale(1.07); filter: drop-shadow(0 6px 20px rgba(201,168,76,0.55)); }
+.badge-title { font-family: 'Cinzel', serif; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; line-height: 1.3; }
+.badge-sub { font-size: 0.58rem; color: rgba(255,255,255,0.42); letter-spacing: 0.04em; line-height: 1.4; }
+.footer-divider { width: 60px; height: 1px; background: rgba(201,168,76,0.35); margin: 0 auto 16px; }
+.footer-bar { max-width: 1200px; margin: 0 auto; }
+.footer-links { display: flex; gap: 20px; align-items: center; justify-content: center; flex-wrap: wrap; }
+.footer-links a { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(201,168,76,0.75); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: #c9a84c; }
+.footer-social { display: flex; gap: 12px; align-items: center; justify-content: center; margin: 10px 0; }
+.social-icon-link { display: flex; align-items: center; justify-content: center; transition: transform 0.2s, filter 0.2s; }
+.social-icon-link:hover { transform: scale(1.1); filter: brightness(1.15); }
+.social-icon-link img { width: 38px; height: 38px; object-fit: contain; display: block; }
+.footer-copy { font-size: 0.62rem; color: rgba(255,255,255,0.28); letter-spacing: 0.04em; line-height: 1.5; margin-top: 10px; }
+.accordion-inner a { color: #c9a84c; }
+@media (max-width: 768px) {
+  body { overflow-x: hidden; }
 
-/* ── HEADER ── */
-header{background:linear-gradient(180deg,#0a1530,#0e1b3a 60%,#132240);padding:1.5rem;text-align:center;position:relative;overflow:hidden;border-bottom:1px solid rgba(201,168,76,.25)}
-header::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.14),transparent 65%)}
-.header-phone{position:absolute;top:1rem;right:1rem;z-index:10;display:inline-flex;align-items:center;gap:.4rem;background:rgba(201,168,76,.15);border:1.5px solid rgba(201,168,76,.45);border-radius:22px;padding:.35rem .85rem;color:#e8c96a;font-family:"Cinzel",serif;font-size:.6rem;letter-spacing:.08em;text-decoration:none;white-space:nowrap}
-.header-phone svg{width:10px;height:10px;fill:#e8c96a;flex-shrink:0}
-.header-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:.75rem}
-.logo-wrap{width:105px;height:105px}
-.logo-wrap img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 4px 16px rgba(201,168,76,.4))}
-header h1{font-family:"Cinzel",serif;color:var(--gold-bright);font-size:clamp(1.3rem,4vw,2rem);letter-spacing:.04em;text-shadow:0 2px 12px rgba(0,0,0,.5)}
-.tagline{display:flex;align-items:center;gap:.5rem;justify-content:center;margin-top:.3rem}
-.tagline-line{flex:1;max-width:40px;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.5))}
-.tagline-line.r{background:linear-gradient(270deg,transparent,rgba(201,168,76,.5))}
-.tagline span{font-family:"Cinzel",serif;font-size:.6rem;letter-spacing:.16em;color:rgba(201,168,76,.75);text-transform:uppercase}
-.sub-tag{margin-top:.25rem;font-size:.7rem;color:rgba(255,255,255,.65);letter-spacing:.1em;text-transform:uppercase}
+  /* HERO */
+  .hero-header { padding: 20px 16px 12px; }
+  .hero-header img { height: 140px !important; max-width: 90% !important; }
 
-/* ── POLICY BAR ── */
-.not-booking-bar{background:var(--navy);border-bottom:2px solid rgba(201,168,76,.3);padding:.6rem 1rem;text-align:center;font-size:.78rem;color:rgba(255,255,255,.85);font-family:"Cinzel",serif;letter-spacing:.05em}
-.nbb-line{display:flex;align-items:center;justify-content:center;gap:.4rem;padding:.1rem 0}
-.nbb-ic{height:13px;width:auto;object-fit:contain;pointer-events:none;flex-shrink:0}
+  /* TRUST PILL */
+  .trust-pill { font-size: 0.6rem; padding: 7px 14px; letter-spacing: 0.1em; white-space: normal; text-align: center; }
 
-.wrapper{max-width:660px;margin:0 auto;padding:1.5rem 1.25rem 4rem}
-.ic{display:inline-block;vertical-align:middle;object-fit:contain;pointer-events:none}
+  /* BUTTONS */
+  .steps-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 8px 24px !important;
+    max-width: 100% !important;
+  }
+  .step-btn {
+    width: 85% !important;
+    max-width: 320px !important;
+  }
+  .step-btn img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  /* Hide Sign & Seal on mobile */
+  .step-btn-static { display: none !important; }
 
-/* ── RUNNING TOTAL ── */
-.rt{background:linear-gradient(135deg,var(--navy),var(--navy-mid));border-radius:14px;padding:1.25rem 1.5rem;margin-bottom:1rem;border:1px solid rgba(201,168,76,.2);box-shadow:0 8px 32px rgba(14,27,58,.2);position:relative;overflow:hidden}
-.rt::before{content:"";position:absolute;inset:0;background:url("https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/logo.png") center/auto 85% no-repeat;opacity:.07;pointer-events:none;z-index:0}
-.rt>*{position:relative;z-index:1}
-.rt-title{font-family:"Cinzel",serif;font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(201,168,76,.6);margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
-.rt-title::after{content:"";flex:1;height:1px;background:rgba(201,168,76,.15)}
-.rt-lines{display:flex;flex-direction:column;gap:.3rem;margin-bottom:.75rem}
-.rt-line{display:flex;justify-content:space-between;font-size:.78rem;color:rgba(255,255,255,.6)}
-.rt-val{font-weight:600;color:#fff}
-.rt-val.free{color:#6fcf97}
-.rt-div{height:1px;background:rgba(201,168,76,.2);margin:.5rem 0}
-.rt-total-row{display:flex;justify-content:space-between;align-items:baseline}
-.rt-total-label{font-family:"Cinzel",serif;font-size:.58rem;color:rgba(255,255,255,.45);letter-spacing:.12em;text-transform:uppercase}
-.rt-total-val{font-family:"Cinzel",serif;font-size:1.9rem;color:var(--gold-bright)}
-.rt-total-val sup{font-size:.95rem;color:var(--gold);vertical-align:super}
+  /* MAIN CONTENT — reviews first, then accordion */
+  .main-content {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    gap: 12px !important;
+    margin: 0 12px !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  .accordion-panel { border-radius: 12px !important; width: 100% !important; }
+  .reviews-panel { border-radius: 12px !important; width: 100% !important; }
 
-/* ── STEPS ── */
-.step{display:none}
-.step.active{display:block;animation:fadeUp .3s ease}
-@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+  /* Accordion sizing */
+  .acc-title { font-size: 0.95rem !important; }
+  .accordion-trigger { padding: 14px 18px !important; }
+  .accordion-inner { padding: 4px 18px 20px !important; font-size: 0.95rem !important; }
 
-.card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:1.75rem;box-shadow:0 2px 20px rgba(14,27,58,.07);margin-bottom:1rem;position:relative;overflow:hidden}
-.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-bright),var(--gold))}
-.card-progress{margin:-1.75rem -1.75rem 1.25rem;padding:.65rem 1.25rem 0;background:var(--navy);border-radius:16px 16px 0 0}
-.card-step-label{font-family:"Cinzel",serif;font-size:.6rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-bright);text-align:center;padding-bottom:.5rem}
-.card-prog-bg{height:3px;background:rgba(255,255,255,.15);margin:0 -1.25rem;overflow:hidden}
-.card-prog-fill{height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-bright));transition:width .5s ease}
+  /* PHOTO CREDIT */
+  .photo-section { padding: 8px 12px; }
 
-/* Travel info */
-.travel-info-box{background:#f7f4ec;border:1px solid rgba(14,27,58,.12);border-left:3px solid var(--gold);border-radius:8px;padding:.75rem 1rem;margin-bottom:1.25rem;font-size:.82rem;color:#3d3520;line-height:1.6;transition:opacity .2s}
-.travel-info-box.dimmed{opacity:.35;pointer-events:none}
-.tib-row{display:flex;align-items:center;gap:.6rem;margin-bottom:.2rem}
-.tib-row:last-child{margin-bottom:0}
-.tib-icon{width:18px;height:18px;object-fit:contain;flex-shrink:0;pointer-events:none}
+  /* BADGES */
+  .badges-grid { gap: 14px; }
+  .badge-item { width: 72px; }
+  .badge-item img { width: 52px; height: 52px; }
+  .badge-title { font-size: 0.52rem; }
+  .badge-sub { font-size: 0.48rem; }
 
-/* ── BOOKING MODE TOGGLE ── */
-.mode-toggle{display:flex;gap:.6rem;margin-bottom:1.25rem}
-.mode-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.75rem 1rem;border:2px solid var(--border);border-radius:10px;background:var(--cream);cursor:pointer;font-family:"Cinzel",serif;font-size:.72rem;font-weight:700;letter-spacing:.05em;color:var(--navy);transition:all .2s;user-select:none}
-.mode-btn img{width:22px;height:22px;object-fit:contain;pointer-events:none;flex-shrink:0}
-.mode-btn:hover{border-color:var(--gold);background:#fff}
-.mode-btn.sel{border-color:var(--navy);background:rgba(14,27,58,.05)}
-.mode-btn.sel.remote{border-color:var(--gold);background:rgba(201,168,76,.08)}
-
-/* RON notice */
-.ron-notice{background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.35);border-left:3px solid var(--gold);border-radius:8px;padding:.75rem 1rem;margin-bottom:1.25rem;font-size:.82rem;color:#3d2e0f;line-height:1.6;display:none}
-.ron-notice.show{display:block}
-
-/* Typography */
-.step-title{font-family:"Cinzel",serif;font-size:1.15rem;color:var(--navy);margin-bottom:.4rem;line-height:1.3;display:flex;align-items:center;gap:.5rem}
-.step-title img{width:24px;height:24px;object-fit:contain;pointer-events:none}
-.step-sub{font-size:.88rem;color:#3d3520;font-weight:500;margin-bottom:1.25rem;line-height:1.6}
-
-/* Inputs */
-input[type=text],input[type=tel],input[type=email]{width:100%;padding:.9rem 1.1rem;border:2px solid var(--border);border-radius:10px;font-family:"DM Sans",sans-serif;font-size:.97rem;color:var(--text);background:var(--cream);outline:none;transition:border-color .2s,box-shadow .2s,opacity .2s;margin-bottom:.7rem}
-input[type=text]:focus,input[type=tel]:focus,input[type=email]:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.15);background:#fff}
-input[type=text].dimmed{opacity:.35;pointer-events:none;background:var(--cream-dark)}
-.date-wrap{position:relative;margin-bottom:.75rem}
-.date-wrap input[type=date]{width:100%;padding:.9rem 3rem .9rem 1.1rem;border:2px solid var(--border);border-radius:10px;font-family:"DM Sans",sans-serif;font-size:.97rem;color:var(--text);background:var(--cream);outline:none;-webkit-appearance:none;appearance:none;transition:border-color .2s}
-.date-wrap input[type=date]:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.15);background:#fff}
-.date-wrap input[type=date]::-webkit-calendar-picker-indicator{opacity:0;position:absolute;right:0;top:0;width:3rem;height:100%;cursor:pointer}
-.date-cal-icon{position:absolute;right:.85rem;top:50%;transform:translateY(-50%);width:22px;height:22px;object-fit:contain;pointer-events:none}
-.field-label{font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:.3rem;display:block;font-family:"Cinzel",serif;letter-spacing:.05em}
-.field-label .req{color:var(--red)}
-.addr-status{font-size:.75rem;margin-top:-.4rem;margin-bottom:.6rem;min-height:1.2rem;line-height:1.4}
-.addr-status.ok{color:var(--green)}
-.addr-status.err{color:var(--red)}
-.addr-status.loading{color:var(--muted)}
-.privacy-note{font-size:.75rem;color:#4a3d20;font-weight:500;margin-top:.5rem;line-height:1.5;display:flex;align-items:center;gap:.4rem}
-.privacy-note img{width:13px;height:13px;object-fit:contain;pointer-events:none}
-
-/* Service options — icons 68px per spec */
-.opts{display:flex;flex-direction:column;gap:.6rem}
-.opt-btn{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.15rem;border:2px solid var(--border);border-radius:12px;background:var(--cream);cursor:pointer;transition:all .2s;text-align:left;font-family:"DM Sans",sans-serif;user-select:none;width:100%}
-.opt-btn:hover{border-color:var(--gold);background:#fff;transform:translateY(-1px)}
-.opt-btn.sel{border-color:var(--navy);background:rgba(14,27,58,.04)}
-.opt-btn.sel .opt-chk{background:var(--navy);border-color:var(--navy)}
-.opt-btn.sel .opt-chk img{opacity:1}
-.opt-left{display:flex;align-items:center;gap:.85rem}
-.opt-chk{width:26px;height:26px;border:2px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;transition:all .2s;background:#fff}
-.opt-chk img{width:16px;height:16px;object-fit:contain;opacity:0;transition:opacity .2s;pointer-events:none}
-.opt-icon{width:68px;height:68px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.opt-icon img{width:68px;height:68px;object-fit:contain;pointer-events:none}
-.opt-name{font-size:.92rem;font-weight:600;color:var(--text);display:block}
-.opt-desc{font-size:.82rem;color:#4a4a4a;font-weight:400;margin-top:.1rem;display:block}
-.opt-right{text-align:right;flex-shrink:0;margin-left:.75rem}
-.opt-price{font-family:"Cinzel",serif;font-size:1rem;font-weight:700;color:var(--gold)}
-.opt-starting{font-size:.62rem;color:#6b5d3f;display:block;margin-bottom:.1rem;font-weight:500}
-.opt-fees{font-size:.62rem;color:#6b5d3f;display:block;margin-top:.1rem;font-weight:500}
-
-/* Add-on counters — icons 58px per spec */
-.ctr-row{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1.1rem;border:2px solid var(--border);border-radius:12px;background:var(--cream);margin-bottom:.6rem;transition:border-color .2s}
-.ctr-row.on{border-color:var(--navy);background:rgba(14,27,58,.03)}
-.ctr-left{display:flex;align-items:center;gap:.6rem}
-.ctr-icon{height:58px;width:58px;object-fit:contain;flex-shrink:0;pointer-events:none}
-.ctr-label{font-size:.9rem;font-weight:600}
-.ctr-sub{font-size:.78rem;color:#4a4a4a;font-weight:400;margin-top:.1rem}
-.ctr-right{display:flex;align-items:center}
-.ctr-ctrl{display:flex;align-items:center;gap:.6rem}
-.ctr-btn{width:32px;height:32px;border-radius:50%;border:2px solid var(--border);background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .18s;color:var(--navy);font-weight:700;font-size:1.1rem}
-.ctr-btn:hover{border-color:var(--navy);background:var(--navy);color:#fff}
-.ctr-val{font-family:"Cinzel",serif;font-size:1rem;font-weight:700;min-width:26px;text-align:center}
-.ctr-price{font-family:"Cinzel",serif;font-size:.82rem;color:var(--gold);font-weight:600;margin-left:.6rem;min-width:44px;text-align:right}
-
-/* Digital delivery toggle row */
-.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1.1rem;border:2px solid var(--border);border-radius:12px;background:var(--cream);margin-bottom:.6rem;transition:border-color .2s;cursor:pointer;user-select:none}
-.toggle-row.on{border-color:var(--navy);background:rgba(14,27,58,.03)}
-.toggle-left{display:flex;align-items:center;gap:.6rem}
-.toggle-switch{width:42px;height:24px;border-radius:12px;background:var(--border);position:relative;transition:background .2s;flex-shrink:0}
-.toggle-switch::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:transform .2s;box-shadow:0 1px 4px rgba(0,0,0,.2)}
-.toggle-row.on .toggle-switch{background:var(--navy)}
-.toggle-row.on .toggle-switch::after{transform:translateX(18px)}
-.delivery-row.on .toggle-switch{background:var(--navy)}
-.delivery-row.on .toggle-switch::after{transform:translateX(18px)}
-.toggle-price{font-family:"Cinzel",serif;font-size:.82rem;color:var(--gold);font-weight:600;margin-left:.6rem;min-width:44px;text-align:right}
-
-/* Delivery row — 3-way method toggle */
-.delivery-row{border:2px solid var(--border);border-radius:12px;background:var(--cream);margin-bottom:.6rem;transition:border-color .2s,background .2s;overflow:hidden}
-.delivery-row.on{border-color:var(--navy);background:rgba(14,27,58,.03)}
-.delivery-header{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1.1rem;cursor:pointer;user-select:none}
-.delivery-toggle-wrap{display:flex;align-items:center;gap:.5rem}
-.delivery-price{font-family:"Cinzel",serif;font-size:.82rem;color:var(--gold);font-weight:600;min-width:44px;text-align:right}
-.delivery-methods{display:none;padding:.1rem 1.1rem .85rem;border-top:1px solid rgba(14,27,58,.08)}
-.delivery-row.on .delivery-methods{display:block}
-.method-label{font-family:"Cinzel",serif;font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(14,27,58,.4);margin-bottom:.5rem;margin-top:.6rem}
-.method-opts{display:flex;gap:.5rem;flex-wrap:wrap}
-.method-btn{flex:1;min-width:80px;padding:.55rem .75rem;border:2px solid var(--border);border-radius:8px;background:#fff;cursor:pointer;font-family:"Cinzel",serif;font-size:.68rem;font-weight:700;letter-spacing:.05em;color:var(--navy);text-align:center;transition:all .18s;user-select:none;display:flex;flex-direction:column;align-items:center;gap:.25rem}
-.method-btn:hover{border-color:var(--gold)}
-.method-btn.sel{border-color:var(--navy);background:rgba(14,27,58,.06)}
-.method-btn img{width:20px;height:20px;object-fit:contain;pointer-events:none}
-.method-note{font-family:"DM Sans",sans-serif;font-size:.65rem;font-weight:400;color:#4a4a4a;letter-spacing:0;margin-top:.1rem}
-.postage-notice{display:none;margin-top:.65rem;padding:.55rem .8rem;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.35);border-left:3px solid var(--gold);border-radius:7px;font-size:.78rem;color:#3d2e0f;line-height:1.5}
-.postage-notice.show{display:block}
-.addon-divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:.75rem 0}
-.ron-badge{font-size:.62rem;font-family:"Cinzel",serif;font-weight:700;letter-spacing:.06em;color:#8b5e00;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.4);border-radius:20px;padding:.12rem .55rem;white-space:nowrap}
-
-/* Nav buttons */
-.nav{display:flex;gap:.75rem;margin-top:1.1rem}
-.btn-next{flex:1;padding:.95rem;background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:var(--gold-bright);border:1px solid rgba(201,168,76,.3);border-radius:10px;font-family:"Cinzel",serif;font-size:.88rem;font-weight:600;letter-spacing:.06em;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:.4rem}
-.btn-next:hover{opacity:.9;transform:translateY(-1px)}
-.btn-next img{width:18px;height:18px;object-fit:contain;pointer-events:none}
-.btn-back{padding:.95rem 1.3rem;background:none;color:var(--muted);border:2px solid var(--border);border-radius:10px;font-size:.88rem;cursor:pointer;transition:all .18s;font-family:"DM Sans",sans-serif}
-.btn-back:hover{border-color:var(--navy);color:var(--navy)}
-.btn-ghost{padding:.95rem 1.3rem;background:none;color:var(--gold);border:2px solid var(--gold);border-radius:10px;font-size:.82rem;cursor:pointer;transition:all .18s;font-family:"Cinzel",serif;font-weight:600;letter-spacing:.04em;display:inline-flex;align-items:center}
-.btn-ghost:hover{background:rgba(201,168,76,.08)}
-
-/* Step 4 */
-.holiday-notice{background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.4);border-left:3px solid var(--gold);border-radius:8px;padding:.75rem 1rem;margin-bottom:1.25rem;font-size:.82rem;color:#3d2e0f;line-height:1.6;display:flex;align-items:flex-start;gap:.6rem}
-.holiday-notice img{width:20px;height:20px;object-fit:contain;flex-shrink:0;margin-top:.1rem;pointer-events:none}
-.tier-legend{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1rem}
-.tier-row{display:flex;align-items:center;justify-content:space-between;padding:.65rem .9rem;border-radius:10px;border:1.5px solid;pointer-events:none}
-.tier-row.standard{background:#fff;border-color:var(--border)}
-.tier-row.evening{background:rgba(201,168,76,.08);border-color:var(--gold)}
-.tier-row.late{background:var(--navy);border-color:var(--navy-mid)}
-.tier-left{display:flex;align-items:center;gap:.65rem}
-.tier-icon{width:32px;height:32px;object-fit:contain;flex-shrink:0;pointer-events:none}
-.tier-name{font-family:"Cinzel",serif;font-size:.75rem;font-weight:700;display:block}
-.tier-row.standard .tier-name{color:var(--navy)}
-.tier-row.evening .tier-name{color:#7a5c00}
-.tier-row.late .tier-name{color:var(--gold-bright)}
-.tier-hours{font-size:.7rem;display:block;margin-top:.1rem}
-.tier-row.standard .tier-hours{color:var(--muted)}
-.tier-row.evening .tier-hours{color:#7a5c00}
-.tier-row.late .tier-hours{color:rgba(255,255,255,.6)}
-.tier-surcharge{font-family:"Cinzel",serif;font-size:.75rem;font-weight:700;white-space:nowrap}
-.tier-row.standard .tier-surcharge{color:var(--green)}
-.tier-row.evening .tier-surcharge{color:var(--gold)}
-.tier-row.late .tier-surcharge{color:var(--gold-bright)}
-.select-one-label{font-family:"Cinzel",serif;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:.4rem;margin-top:.85rem}
-.tab-bar{display:flex;border:2px solid var(--border);border-radius:10px;overflow:hidden}
-.tab-btn{flex:1;padding:.75rem 1rem;font-family:"Cinzel",serif;font-size:.75rem;font-weight:700;letter-spacing:.05em;cursor:pointer;background:var(--cream);color:var(--navy);border:none;text-align:center;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:.4rem}
-.tab-btn img{width:15px;height:15px;object-fit:contain;pointer-events:none}
-.tab-btn:first-child{border-right:1px solid var(--border)}
-.tab-btn.active{background:var(--navy);color:var(--gold-bright)}
-.tab-content{display:none;padding:.85rem 0 0}
-.tab-content.active{display:block;animation:fadeIn .2s ease}
-.btn-check{width:100%;padding:.9rem;background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:var(--gold-bright);border:1px solid rgba(201,168,76,.3);border-radius:10px;font-family:"Cinzel",serif;font-size:.85rem;font-weight:600;cursor:pointer;margin-bottom:.75rem}
-.late-notice{background:rgba(14,27,58,.06);border:1px solid rgba(14,27,58,.2);border-left:3px solid var(--navy);border-radius:8px;padding:.65rem .9rem;margin-top:.5rem;font-size:.78rem;color:var(--navy);line-height:1.5;display:flex;align-items:center;gap:.5rem}
-.late-notice img{width:16px;height:16px;object-fit:contain;flex-shrink:0;pointer-events:none}
-.selected-slot-box{display:none;margin-top:.75rem;padding:.75rem 1rem;background:rgba(26,102,68,.08);border:1px solid rgba(26,102,68,.3);border-radius:8px;font-size:.85rem;color:var(--green);font-weight:600;align-items:center;gap:.5rem}
-.selected-slot-box img{width:16px;height:16px;object-fit:contain;flex-shrink:0;pointer-events:none}
-
-/* Slots */
-.slot-grid{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.5rem}
-.slot-btn{padding:.45rem .85rem;border-radius:6px;border:2px solid;font-size:.82rem;font-weight:600;cursor:pointer;transition:all .15s;font-family:"DM Sans",sans-serif}
-.slot-btn.standard{background:#fff;border-color:var(--border);color:var(--navy)}
-.slot-btn.evening{background:rgba(201,168,76,.1);border-color:var(--gold);color:#7a5c00}
-.slot-btn.late{background:var(--navy);border-color:var(--navy-mid);color:#fff}
-.slot-btn:hover{transform:translateY(-1px);box-shadow:0 2px 8px rgba(14,27,58,.15)}
-.slot-btn.sel{outline:2px solid var(--gold-bright);outline-offset:1px}
-
-/* Range cards */
-.range-cards{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1rem}
-.range-card{border-radius:10px;padding:.85rem 1rem;border:2px solid;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:all .2s;user-select:none}
-.range-card.standard{background:#fff;border-color:var(--border)}
-.range-card.evening{background:rgba(201,168,76,.08);border-color:var(--gold)}
-.range-card.late{background:var(--navy);border-color:var(--navy-mid)}
-.range-card.sel{box-shadow:0 0 0 2px var(--gold-bright)}
-.range-card-left{display:flex;align-items:center;gap:.75rem}
-.rc-icon{width:34px;height:34px;object-fit:contain;pointer-events:none}
-.rc-name{font-family:"Cinzel",serif;font-size:.75rem;font-weight:700;display:block}
-.range-card.standard .rc-name{color:var(--navy)}
-.range-card.evening .rc-name{color:#7a5c00}
-.range-card.late .rc-name{color:var(--gold-bright)}
-.rc-hours{font-size:.7rem;display:block;margin-top:.1rem}
-.range-card.standard .rc-hours{color:var(--muted)}
-.range-card.evening .rc-hours{color:#7a5c00}
-.range-card.late .rc-hours{color:rgba(255,255,255,.6)}
-.rc-surcharge{font-family:"Cinzel",serif;font-size:.8rem;font-weight:700;white-space:nowrap}
-.range-card.standard .rc-surcharge{color:var(--green)}
-.range-card.evening .rc-surcharge{color:var(--gold)}
-.range-card.late .rc-surcharge{color:var(--gold-bright)}
-
-/* Quote tab buttons */
-.quote-btns{display:flex;flex-direction:column;gap:.5rem;margin-top:.75rem}
-.qpb{padding:.8rem 1rem;border-radius:10px;font-family:"Cinzel",serif;font-size:.78rem;font-weight:600;cursor:pointer;border:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .18s}
-.qpb img{width:14px;height:14px;object-fit:contain;pointer-events:none}
-.qpb.gold{background:linear-gradient(135deg,var(--gold),var(--gold-bright));color:var(--navy)}
-.qpb.outline{background:#fff;border:2px solid var(--border);color:var(--navy)}
-.qpb.ghost{background:none;border:2px solid var(--gold);color:var(--gold)}
-
-/* Quote summary card */
-.sum-card{background:#fff;border:1px solid var(--border);border-radius:18px;overflow:hidden;box-shadow:0 8px 40px rgba(14,27,58,.12)}
-.sum-hdr{background:linear-gradient(160deg,#0a1530,#0e1b3a 50%,#152040);padding:2rem 1.75rem;text-align:center;position:relative;overflow:hidden}
-.sum-hdr::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.18),transparent 65%)}
-.sum-logo{width:60px;height:60px;margin:0 auto .75rem;position:relative}
-.sum-logo img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 2px 12px rgba(201,168,76,.4))}
-.sum-badge{display:inline-block;background:rgba(201,168,76,.18);color:var(--gold-pale);font-family:"Cinzel",serif;font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:.22rem .8rem;border-radius:20px;border:1px solid rgba(201,168,76,.3);margin-bottom:.75rem;position:relative}
-.sum-total-lbl{font-family:"Cinzel",serif;font-size:.6rem;letter-spacing:.15em;color:rgba(255,255,255,.45);text-transform:uppercase;position:relative}
-.sum-total-amt{font-family:"Cinzel",serif;font-size:3rem;color:var(--gold-bright);line-height:1.05;text-shadow:0 2px 20px rgba(201,168,76,.3);position:relative}
-.sum-total-amt sup{font-size:1.4rem;color:var(--gold);vertical-align:super}
-.dep-pills{display:flex;flex-direction:column;gap:.4rem;margin-top:1rem;position:relative}
-.dep-pill{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(201,168,76,.2);border-radius:8px;padding:.55rem 1rem}
-.dep-pill.hi{background:rgba(201,168,76,.15);border-color:rgba(201,168,76,.45)}
-.dp-lbl{color:rgba(255,255,255,.65);font-size:.78rem}
-.dp-lbl.b{color:rgba(255,255,255,.9);font-weight:600}
-.dp-val{font-family:"Cinzel",serif;color:var(--gold-pale);font-weight:700;font-size:.95rem}
-.dp-val.lg{font-size:1.15rem}
-.sum-body{padding:1.6rem 1.75rem}
-.sum-sec{font-family:"Cinzel",serif;font-size:.58rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem;display:flex;align-items:center;gap:.5rem}
-.sum-sec::after{content:"";flex:1;height:1px;background:var(--cream-dark)}
-.sum-line{display:flex;justify-content:space-between;align-items:baseline;padding:.45rem 0;border-bottom:1px dashed rgba(0,0,0,.06)}
-.sum-line:last-child{border-bottom:none}
-.sum-key{color:#3d3520;font-size:.88rem;font-weight:500}
-.sum-val{font-weight:600;font-size:.88rem}
-.sum-val.free{color:var(--green)}
-.sum-div{height:1px;background:var(--cream-dark);margin:.9rem 0}
-.sum-tot-row{display:flex;justify-content:space-between;align-items:center;padding:.3rem 0}
-.stl{font-family:"Cinzel",serif;font-size:.6rem;font-weight:700;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
-.stv{font-family:"Cinzel",serif;font-size:1.25rem;color:var(--navy)}
-.stv.gold{color:var(--gold)}
-.stv.green{color:var(--green)}
-
-/* Disc / policy boxes */
-.disc{background:var(--cream);border:1px solid var(--cream-dark);border-left:3px solid var(--gold);border-radius:8px;padding:.85rem 1rem;margin-top:1rem;display:flex;align-items:flex-start;gap:.6rem}
-.disc img{width:18px;height:18px;object-fit:contain;flex-shrink:0;margin-top:.1rem;pointer-events:none}
-.disc-text{font-size:.82rem;color:#3d2e0f;font-weight:500;line-height:1.6}
-.policy{background:rgba(139,31,47,.05);border:1px solid rgba(139,31,47,.15);border-left:3px solid var(--red);border-radius:8px;padding:.85rem 1rem;margin-top:.6rem;display:flex;align-items:flex-start;gap:.6rem}
-.policy img{width:18px;height:18px;object-fit:contain;flex-shrink:0;margin-top:.1rem;pointer-events:none}
-.policy-text{font-size:.82rem;color:#3a1820;font-weight:500;line-height:1.6}
-
-/* TOS — circle checkbox per spec */
-.tos-inline{background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:1rem;margin-top:1rem}
-.tos-hdr{font-family:"Cinzel",serif;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem}
-.tos-hdr img{width:16px;height:16px;object-fit:contain;pointer-events:none}
-.tos-scroll{max-height:200px;overflow-y:auto;font-family:"EB Garamond",serif;font-size:.88rem;color:#1a1a1a;line-height:1.6;padding-right:.5rem;margin-bottom:.75rem}
-.tos-scroll h4{font-family:"Cinzel",serif;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0e1b3a;margin:1rem 0 .3rem;border-bottom:1px solid #ede5d0;padding-bottom:.2rem}
-.tos-agree-row{display:flex;align-items:flex-start;gap:.75rem;cursor:pointer;user-select:none;padding:.75rem;border:2px solid var(--border);border-radius:8px;background:#fff;transition:border-color .2s}
-.tos-agree-row:hover{border-color:var(--gold)}
-.tos-agree-row.on{border-color:var(--navy);background:rgba(14,27,58,.03)}
-.tos-chk{width:22px;height:22px;border:2px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .18s;flex-shrink:0;margin-top:.1rem;overflow:hidden}
-.tos-chk img{width:14px;height:14px;object-fit:contain;opacity:0;transition:opacity .2s;pointer-events:none}
-.tos-agree-row.on .tos-chk{background:var(--navy);border-color:var(--navy)}
-.tos-agree-row.on .tos-chk img{opacity:1}
-.tos-agree-text{font-size:.82rem;color:#333;line-height:1.5}
-
-/* FAQ ack */
-.faq-ack-box{background:var(--cream);border:1px solid var(--border);border-radius:10px;padding:.85rem 1rem;margin-top:1rem;cursor:pointer;user-select:none;display:flex;align-items:flex-start;gap:.75rem;transition:border-color .2s}
-.faq-ack-box:hover{border-color:var(--gold)}
-.faq-ack-box.on{border-color:var(--navy);background:rgba(14,27,58,.03)}
-.faq-ack-chk{width:22px;height:22px;border:2px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem;overflow:hidden;transition:all .18s}
-.faq-ack-chk img{width:14px;height:14px;object-fit:contain;opacity:0;transition:opacity .2s;pointer-events:none}
-.faq-ack-box.on .faq-ack-chk{background:var(--navy);border-color:var(--navy)}
-.faq-ack-box.on .faq-ack-chk img{opacity:1}
-.faq-ack-text{font-size:.82rem;color:#333;line-height:1.5}
-.faq-ack-text a{color:var(--gold);font-weight:600}
-
-/* Action buttons Step 8 */
-.act-btn{flex:1;padding:.8rem;border-radius:9px;font-family:"Cinzel",serif;font-size:.78rem;font-weight:600;letter-spacing:.06em;cursor:pointer;border:none;transition:all .18s;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:.5rem}
-.act-btn.ghost{background:none;border:2px solid var(--gold);color:var(--gold)}
-.act-btn.ghost:hover{background:rgba(201,168,76,.08)}
-.act-btn.outline{background:var(--cream);color:var(--navy);border:2px solid var(--border)}
-.act-btn.outline:hover{border-color:var(--navy)}
-.act-btn img{width:16px;height:16px;object-fit:contain;pointer-events:none}
-
-/* NOT CONFIRMED notice */
-.not-confirmed-notice{background:rgba(139,31,47,.08);border:2px solid rgba(139,31,47,.35);border-left:4px solid #8b1f2f;border-radius:10px;padding:1rem 1.1rem;margin-bottom:1.25rem;display:flex;align-items:flex-start;gap:.7rem}
-.not-confirmed-notice img{width:18px;height:18px;object-fit:contain;flex-shrink:0;margin-top:.1rem;pointer-events:none}
-.not-confirmed-notice p{font-size:.84rem;color:#3a1820;line-height:1.6}
-.not-confirmed-notice strong{color:#8b1f2f}
-
-/* Time Flies delivery section in step 6 */
-.tf-delivery-section{background:#f7f4ec;border:1px solid rgba(14,27,58,.12);border-left:3px solid var(--gold);border-radius:10px;padding:1rem 1.1rem;margin-bottom:1.25rem}
-.tf-delivery-hdr{font-family:"Cinzel",serif;font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--navy);margin-bottom:.85rem;display:flex;align-items:center;gap:.5rem}
-.tf-delivery-hdr img{width:16px;height:16px;object-fit:contain;pointer-events:none}
-.tf-method-opts{display:flex;gap:.5rem;margin-bottom:.85rem;flex-wrap:wrap}
-.tf-method-btn{flex:1;min-width:100px;padding:.65rem .75rem;border:2px solid var(--border);border-radius:9px;background:#fff;cursor:pointer;font-family:"Cinzel",serif;font-size:.7rem;font-weight:700;letter-spacing:.05em;color:var(--navy);text-align:center;transition:all .18s;user-select:none}
-.tf-method-btn:hover{border-color:var(--gold)}
-.tf-method-btn.sel{border-color:var(--navy);background:rgba(14,27,58,.05)}
-.tf-fields{display:none}
-.tf-fields.show{display:block}
-.tf-bring-row{display:flex;align-items:center;gap:.65rem;padding:.65rem .85rem;border:2px solid var(--border);border-radius:9px;background:#fff;cursor:pointer;user-select:none;transition:all .18s;margin-top:.5rem}
-.tf-bring-row:hover{border-color:var(--gold)}
-.tf-bring-row.sel{border-color:var(--navy);background:rgba(14,27,58,.04)}
-.tf-bring-chk{width:22px;height:22px;border:2px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;transition:all .18s;background:#fff}
-.tf-bring-chk img{width:13px;height:13px;object-fit:contain;opacity:0;transition:opacity .2s;pointer-events:none}
-.tf-bring-row.sel .tf-bring-chk{background:var(--navy);border-color:var(--navy)}
-.tf-bring-row.sel .tf-bring-chk img{opacity:1}
-.tf-bring-label{font-size:.84rem;font-weight:600;color:var(--navy)}
-
-/* Shipping method cards */
-.ship-cards{display:flex;flex-direction:column;gap:.5rem;margin-top:.75rem}
-.ship-card{display:flex;align-items:center;justify-content:space-between;padding:.65rem .9rem;border:2px solid var(--border);border-radius:9px;background:#fff;cursor:pointer;transition:all .18s;user-select:none}
-.ship-card:hover{border-color:var(--gold)}
-.ship-card.sel{border-color:var(--navy);background:rgba(14,27,58,.04)}
-.ship-card-left{display:flex;align-items:center;gap:.65rem}
-.ship-card-chk{width:20px;height:20px;border:2px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;transition:all .18s;background:#fff}
-.ship-card-chk img{width:12px;height:12px;object-fit:contain;opacity:0;transition:opacity .2s;pointer-events:none}
-.ship-card.sel .ship-card-chk{background:var(--navy);border-color:var(--navy)}
-.ship-card.sel .ship-card-chk img{opacity:1}
-.ship-card-name{font-size:.84rem;font-weight:600;color:var(--navy)}
-.ship-card-transit{font-size:.72rem;color:var(--muted);margin-top:.1rem}
-.ship-card-right{text-align:right;flex-shrink:0}
-.ship-card-est{font-family:"Cinzel",serif;font-size:.82rem;color:var(--gold);font-weight:700}
-.ship-card-note{font-size:.65rem;color:var(--muted);margin-top:.1rem}
-.ship-postage-note{font-size:.75rem;color:#4a3d20;margin-top:.65rem;line-height:1.5;padding:.5rem .75rem;background:rgba(201,168,76,.08);border-radius:6px;border-left:2px solid var(--gold)}
-
-/* Note to notary */
-.note-notary-wrap{margin-bottom:1.1rem}
-.note-notary-label{font-family:"Cinzel",serif;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);margin-bottom:.4rem;display:block}
-.note-notary-textarea{width:100%;padding:.85rem 1rem;border:2px solid var(--border);border-radius:10px;font-family:"DM Sans",sans-serif;font-size:.88rem;color:var(--text);background:var(--cream);outline:none;resize:vertical;min-height:90px;transition:border-color .2s;line-height:1.6}
-.note-notary-textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.15);background:#fff}
-.note-notary-counter{font-size:.7rem;color:var(--muted);text-align:right;margin-top:.2rem}
-.note-notary-counter.warn{color:var(--red)}
-
-/* FAQ ack on step 5 */
-.step5-faq-section{margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--border)}
-.step5-faq-hdr{font-family:"Cinzel",serif;font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--navy);margin-bottom:.6rem}
-.step5-faq-link-box{background:linear-gradient(135deg,rgba(201,168,76,.1),rgba(201,168,76,.05));border:1px solid rgba(201,168,76,.3);border-radius:10px;padding:.85rem 1rem;margin-bottom:.75rem;display:flex;align-items:center;justify-content:space-between;gap:.75rem;flex-wrap:wrap}
-.step5-faq-link-box p{font-size:.82rem;color:#3d2e0f;line-height:1.5;flex:1}
-.step5-faq-link-btn{display:inline-block;padding:.5rem 1rem;background:linear-gradient(135deg,var(--gold),var(--gold-bright));color:var(--navy);font-family:"Cinzel",serif;font-size:.68rem;font-weight:700;letter-spacing:.08em;border-radius:7px;text-decoration:none;white-space:nowrap;transition:all .18s;flex-shrink:0}
-.step5-faq-link-btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(201,168,76,.4)}
-
-/* PayPal step */
-.paypal-header{display:flex;align-items:center;justify-content:center;gap:.75rem;margin-bottom:.85rem}
-.paypal-header img{height:28px;object-fit:contain;pointer-events:none}
-.paypal-header-text{font-family:"Cinzel",serif;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-
-/* Thank you */
-.ty-appt{background:linear-gradient(135deg,var(--navy),var(--navy-mid));border-radius:12px;padding:1.25rem;margin-bottom:1rem;text-align:left}
-.ty-appt-label{font-family:"Cinzel",serif;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(201,168,76,.6);margin-bottom:.4rem}
-.ty-appt-val{font-family:"Cinzel",serif;font-size:1rem;color:#e8c96a}
-.ty-disclaimer{background:rgba(139,31,47,.05);border:1px solid rgba(139,31,47,.2);border-left:3px solid var(--red);border-radius:8px;padding:1rem 1.1rem;margin-bottom:1rem}
-.ty-disclaimer p{font-size:.85rem;color:#3a1820;line-height:1.6}
-.faq-link-box{background:linear-gradient(135deg,rgba(201,168,76,.1),rgba(201,168,76,.05));border:1px solid rgba(201,168,76,.3);border-radius:12px;padding:1rem 1.25rem;margin-top:1rem;text-align:center}
-.faq-link-box p{font-size:.82rem;color:#3d2e0f;line-height:1.6;margin-bottom:.6rem}
-.faq-link-btn{display:inline-block;padding:.6rem 1.25rem;background:linear-gradient(135deg,var(--gold),var(--gold-bright));color:var(--navy);font-family:"Cinzel",serif;font-size:.72rem;font-weight:700;letter-spacing:.08em;border-radius:8px;text-decoration:none;transition:all .18s}
-.faq-link-btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(201,168,76,.4)}
-
-/* Quote modal */
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:500;align-items:center;justify-content:center;padding:1rem}
-.modal-overlay.show{display:flex}
-.modal{background:#fff;border-radius:18px;overflow:hidden;max-width:480px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.3);max-height:90vh;overflow-y:auto}
-.modal-hdr{background:linear-gradient(160deg,#0a1530,#0e1b3a);padding:1.5rem;text-align:center;position:relative}
-.modal-hdr::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.18),transparent 65%)}
-.modal-logo{width:64px;height:64px;margin:0 auto .5rem;position:relative}
-.modal-logo img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 2px 12px rgba(201,168,76,.4))}
-.modal-brand{font-family:"Cinzel",serif;font-size:.95rem;font-weight:700;color:var(--gold-bright);letter-spacing:.06em;position:relative;margin-bottom:.3rem}
-.modal-contact{font-size:.68rem;color:rgba(255,255,255,.65);letter-spacing:.04em;position:relative;margin-bottom:.15rem;line-height:1.8}
-.modal-contact-dot{margin:0 .3rem;opacity:.4}
-.modal-badge{display:inline-block;background:rgba(201,168,76,.18);color:#f0dfa0;font-family:"Cinzel",serif;font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:.22rem .8rem;border-radius:20px;border:1px solid rgba(201,168,76,.3);margin-bottom:.6rem;position:relative}
-.modal-total-lbl{font-family:"Cinzel",serif;font-size:.6rem;letter-spacing:.15em;color:rgba(255,255,255,.45);text-transform:uppercase;position:relative}
-.modal-total{font-family:"Cinzel",serif;font-size:2.5rem;color:var(--gold-bright);position:relative}
-.modal-total sup{font-size:1.2rem;color:var(--gold);vertical-align:super}
-.modal-body{padding:1.25rem 1.5rem}
-.modal-sec{font-family:"Cinzel",serif;font-size:.58rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem}
-.modal-sec::after{content:"";flex:1;height:1px;background:#ede5d0}
-.modal-line{display:flex;justify-content:space-between;padding:.4rem 0;border-bottom:1px dashed rgba(0,0,0,.06);font-size:.85rem}
-.modal-line:last-child{border-bottom:none}
-.modal-line span:first-child{color:#3d3520;font-weight:500}
-.modal-line span:last-child{font-weight:600}
-.modal-div{height:1px;background:#ede5d0;margin:.75rem 0}
-.modal-total-row{display:flex;justify-content:space-between;align-items:center;padding:.25rem 0}
-.modal-tl{font-family:"Cinzel",serif;font-size:.6rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;font-weight:700}
-.modal-tv{font-family:"Cinzel",serif;font-size:1.1rem;color:var(--navy)}
-.modal-tv.gold{color:var(--gold)}
-.modal-notice{background:#f8f3e8;border-left:3px solid var(--gold);border-radius:6px;padding:.65rem .85rem;margin-top:.75rem;font-size:.78rem;color:#3d2e0f;line-height:1.5}
-.modal-actions{display:flex;gap:.6rem;margin-top:1rem;flex-wrap:wrap}
-.modal-btn{flex:1;min-width:110px;padding:.75rem;border-radius:8px;font-family:"Cinzel",serif;font-size:.72rem;font-weight:600;cursor:pointer;border:none;display:flex;align-items:center;justify-content:center;gap:.4rem;transition:all .18s}
-.modal-btn img{width:14px;height:14px;object-fit:contain;pointer-events:none}
-.modal-btn.print{background:linear-gradient(135deg,var(--gold),var(--gold-bright));color:var(--navy)}
-.modal-btn.book-btn{background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:var(--gold-bright);border:1px solid rgba(201,168,76,.3)}
-.modal-btn.close-btn{background:none;border:2px solid var(--border);color:var(--navy)}
-
-/* ── FOOTER ── */
-footer{background:var(--navy);border-top:2px solid rgba(201,168,76,.25);padding:1.75rem 1.25rem 1.5rem}
-.footer-nav{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.5rem 1.25rem;margin-bottom:1.1rem}
-.footer-nav a{font-family:"Cinzel",serif;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-bright);text-decoration:none;transition:opacity .18s}
-.footer-nav a:hover{opacity:.7}
-.footer-nav-dot{width:3px;height:3px;background:rgba(201,168,76,.4);border-radius:50%;flex-shrink:0}
-.footer-socials{display:flex;align-items:center;justify-content:center;gap:.85rem;margin-bottom:1.1rem}
-.footer-social-link{display:inline-flex;align-items:center;justify-content:center;transition:opacity .18s;text-decoration:none}
-.footer-social-link:hover{opacity:.75}
-.footer-rule{height:1px;background:rgba(201,168,76,.15);margin-bottom:.85rem}
-.footer-copy{text-align:center;font-size:.68rem;color:rgba(255,255,255,.4);line-height:1.9;font-family:"DM Sans",sans-serif}
-.footer-copy span{display:block}
-
-/* Lead capture form */
-.qpb.navy{background:var(--navy);color:var(--gold-bright);border:2px solid rgba(201,168,76,.35)}
-.qpb.navy:hover{opacity:.9}
-.qpb.navy img{width:16px;height:16px;object-fit:contain;pointer-events:none}
-.lead-form{display:none;background:var(--cream);border:1px solid var(--border);border-left:3px solid var(--navy);border-radius:10px;padding:1rem 1.1rem;margin-top:.5rem;animation:fadeIn .2s ease}
-.lead-form input,.lead-form textarea{width:100%;padding:.75rem 1rem;border:2px solid var(--border);border-radius:8px;font-family:"DM Sans",sans-serif;font-size:.9rem;color:var(--text);background:#fff;outline:none;margin-bottom:.55rem;resize:vertical;transition:border-color .2s}
-.lead-form input:focus,.lead-form textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.12)}
-.lead-form textarea{min-height:72px}
-.lead-status{display:none;font-size:.78rem;color:var(--red);margin-bottom:.5rem;font-weight:500}
-
-@media print{
-  /* Kill blank first page — hide everything then show only step8 */
-  html,body{height:auto !important;margin:0 !important;padding:0 !important;background:white !important}
-  body>*{display:none !important}
-  body>.wrapper{display:block !important;padding:0 !important;max-width:100% !important;margin:0 !important}
-  .wrapper>.step{display:none !important}
-  #step8{display:block !important}
-  /* Hide UI elements */
-  header,.not-booking-bar,.rt,.nav,footer,
-  #printBtn8,#startOverBtn,#faqAckRow,.step8-actions,.act-btns,
-  .faq-modal-overlay,.modal-overlay,.modal-print-sheet{display:none !important}
-  /* Compress step 8 hero */
-  .ty-hdr{padding:.4rem 1rem !important}
-  .ty-icon{width:32px !important;height:32px !important;margin:.2rem auto !important}
-  .ty-badge{font-size:.52rem !important;padding:.12rem .45rem !important;margin-bottom:.2rem !important}
-  .ty-booking-id{font-size:.6rem !important;margin-bottom:.15rem !important}
-  .ty-name{font-size:1.2rem !important;margin-bottom:.1rem !important}
-  .ty-sub{font-size:.68rem !important}
-  /* Compress appointment card */
-  .ty-appt-card{padding:.5rem .8rem !important;margin:.35rem 0 !important}
-  .ty-appt-label{font-size:.52rem !important;margin-bottom:.15rem !important}
-  .ty-appt-date{font-size:.85rem !important}
-  .ty-appt-svc,.ty-appt-ref{font-size:.65rem !important}
-  /* Compress pending notice */
-  .ty-pending-notice{padding:.4rem .65rem !important;margin:.3rem 0 !important;font-size:.68rem !important}
-  .ty-pending-notice p{margin:.1rem 0 !important}
-  /* Compress quote summary */
-  .ty-sum-section{padding:.35rem 0 !important}
-  .sum-sec{font-size:.58rem !important;margin-bottom:.25rem !important}
-  .sum-line{padding:.1rem 0 !important;font-size:.72rem !important}
-  .sum-key,.sum-val{font-size:.72rem !important}
-  .sum-div{margin:.2rem 0 !important}
-  .sum-tot-row{padding:.15rem 0 !important}
-  .stl{font-size:.68rem !important}
-  .stv{font-size:.8rem !important}
-  #sumDue8{font-size:.95rem !important}
-  /* Compress disclaimer */
-  .disc,.policy,.ty-disc{padding:.25rem .4rem !important;font-size:.65rem !important;margin:.2rem 0 !important}
-  /* Single page enforcement */
-  #step8{page-break-inside:avoid;page-break-before:avoid;page-break-after:avoid}
-  /* Modal print override */
-  body.printing-modal>*{display:none !important}
-  body.printing-modal .modal-print-sheet{display:block !important;padding:0 !important}
-  .modal-print-sheet .modal-hdr{background:#fff !important;border-bottom:2px solid #c9a84c;padding:1rem 1.5rem}
-  .modal-print-sheet .modal-hdr::before{display:none}
-  .modal-print-sheet .modal-logo img{filter:none}
-  .modal-print-sheet .modal-brand{color:#0e1b3a !important}
-  .modal-print-sheet .modal-contact{color:#3d3520 !important}
-  .modal-print-sheet .modal-badge{background:#f0dfa0 !important;color:#0e1b3a !important;border-color:#c9a84c !important}
-  .modal-print-sheet .modal-total-lbl{color:#6b7280 !important}
-  .modal-print-sheet .modal-total{color:#0e1b3a !important;font-size:2rem}
-  .modal-print-sheet .modal-total sup{color:#c9a84c !important}
-  .modal-print-sheet .modal-body{padding:1rem 1.5rem}
-  .modal-print-sheet .modal-actions{display:none !important}
-  .modal-print-sheet .modal-tv.gold{color:#c9a84c !important}
-  .modal-print-sheet .modal-notice{border-left-color:#c9a84c;background:#f8f3e8}
+  /* FOOTER */
+  .footer-links { flex-direction: column; gap: 12px; align-items: center; }
+  .footer-social { gap: 16px; }
+  .footer-copy { font-size: 0.58rem; padding: 0 12px; }
 }
-@page{margin:.3in;size:letter portrait}
-
-/* ── FAQ PREP MODAL ── */
-.faq-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:600;align-items:center;justify-content:center;padding:1rem}
-.faq-modal-overlay.show{display:flex}
-.faq-modal{background:#fff;border-radius:18px;overflow:hidden;max-width:520px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.35);display:flex;flex-direction:column;max-height:88vh}
-.faq-modal-hdr{background:linear-gradient(160deg,#0a1530,#0e1b3a);padding:1.25rem 1.5rem;position:relative;flex-shrink:0}
-.faq-modal-hdr::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.18),transparent 65%)}
-.faq-modal-title{font-family:"Cinzel",serif;font-size:.95rem;font-weight:700;color:var(--gold-bright);letter-spacing:.06em;position:relative;text-align:center}
-.faq-modal-sub{font-size:.72rem;color:rgba(255,255,255,.55);margin-top:.25rem;position:relative;text-align:center}
-.faq-modal-close{position:absolute;top:.85rem;right:1rem;width:28px;height:28px;border-radius:50%;border:1.5px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;font-size:1rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .18s;z-index:2}
-.faq-modal-close:hover{background:rgba(255,255,255,.2)}
-.faq-modal-body{overflow-y:auto;padding:1.25rem 1.5rem;flex:1}
-.faq-modal-body::-webkit-scrollbar{width:4px}
-.faq-modal-body::-webkit-scrollbar-track{background:#f0ece2}
-.faq-modal-body::-webkit-scrollbar-thumb{background:var(--gold);border-radius:4px}
-.faq-item{border-bottom:1px solid var(--border);padding:.9rem 0}
-.faq-item:last-child{border-bottom:none}
-.faq-q{font-family:"Cinzel",serif;font-size:.78rem;font-weight:700;color:var(--navy);margin-bottom:.45rem;letter-spacing:.02em}
-.faq-a{font-size:.82rem;color:#3d3520;line-height:1.65}
-.faq-modal-footer{flex-shrink:0;padding:.85rem 1.5rem;border-top:1px solid var(--border);background:var(--cream);display:flex;align-items:center;justify-content:space-between;gap:.75rem}
-.faq-scroll-hint{font-size:.72rem;color:var(--muted);font-style:italic;transition:opacity .3s}
-.faq-scroll-hint.hide{opacity:0;pointer-events:none}
-.faq-modal-done{padding:.65rem 1.25rem;background:linear-gradient(135deg,var(--gold),var(--gold-bright));color:var(--navy);font-family:"Cinzel",serif;font-size:.72rem;font-weight:700;letter-spacing:.06em;border:none;border-radius:8px;cursor:pointer;transition:all .18s;opacity:.45;pointer-events:none}
-.faq-modal-done.ready{opacity:1;pointer-events:auto}
-.faq-modal-done.ready:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(201,168,76,.4)}
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<video class="video-bg" autoplay muted loop playsinline oncanplay="this.playbackRate=0.25;" aria-hidden="true" tabindex="-1">
+  <source src="https://laceesharee.github.io/rtc-links/Courthouse_at_dusk_timelapse_9fced4f026.mp4" type="video/mp4">
+</video>
+<div class="page-wrap">
 
-<!-- ── HEADER ── -->
-<header>
-  <a class="header-phone" href="tel:+18175127217">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-    817-512-7217
-  </a>
-  <div class="header-inner">
-    <div class="logo-wrap">
-      <a href="https://www.roundtheclocknotary.com" target="_blank" rel="noopener" style="display:block;width:100%;height:100%">
-        <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/logo.png" alt="Round the Clock Notary">
+  <div class="hero-header" id="heroHeader">
+    <img src="logo_final.png" alt="Round The Clock Notary — Hood County Texas Mobile Notary">
+  </div>
+
+  <div class="van-strip" aria-hidden="true">
+    <img src="van.png" alt="">
+  </div>
+
+  <div class="trust-bar" aria-label="Credentials summary">
+    <div class="trust-pill">
+      <span class="pill-dot">&#9679;</span>
+      LICENSED &middot; BONDED &middot; INSURED &middot; 24/7 MOBILE
+      <span class="pill-dot">&#9679;</span>
+    </div>
+  </div>
+
+  <nav class="steps-row" aria-label="Quick actions">
+    <a href="https://laceesharee.github.io/quote-booking/" class="step-btn" aria-label="Get a free notary quote — opens fee calculator">
+      <img src="now.png" alt="Free Quote">
+    </a>
+    <a href="https://laceesharee.github.io/quote-booking/" class="step-btn" aria-label="Book a notary appointment online">
+      <img src="now__2_.png" alt="Book Now">
+    </a>
+    <div class="step-btn-static" aria-hidden="true">
+      <img src="now__5_.png" alt="Sign and Seal">
+    </div>
+  </nav>
+
+  <div class="main-content" id="main-content">
+    <section class="accordion-panel" aria-label="Information and FAQ">
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-body-1">
+          <span class="acc-title">Before the Clock Starts – FAQ</span>
+          <span class="acc-plus" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion-body" id="acc-body-1" role="region">
+          <div class="accordion-inner">
+            <h4>What Does a Notary Public Do</h4>
+            <p>A Texas notary public verifies identity and witnesses the signing of documents. The notary confirms the signer appears willing and aware of the document being signed. A notary does not review or approve the legal content of a document.</p>
+            <h4>Can a Notary Give Legal Advice</h4>
+            <p>No. Texas notaries are not attorneys. A notary cannot explain legal meaning, choose forms, or advise how to complete documents. Speak with a licensed attorney if legal guidance is needed.</p>
+            <h4>How Much Does Notarization Cost</h4>
+            <p>Texas law sets the maximum fee for the notarial act itself. Additional service costs such as travel, printing, wait time, and after-hours appointments are separate. Use the Free Quote Calculator to see an estimated total before booking.</p>
+            <h4>Why Do You Charge Travel Fees</h4>
+            <p>Mobile notary services travel to your home, office, hospital, or other location. Travel fees cover time, distance, and transportation costs once the notary begins traveling. Travel fees apply regardless of whether the notarization is completed.</p>
+            <h4>Why Do Prices Change at Night or on Weekends</h4>
+            <p>Evening, late night, weekend, and holiday appointments include additional service charges. The quote builder calculates this automatically based on your appointment time.</p>
+            <h4>What Identification Is Required</h4>
+            <p>Every signer must present valid government-issued photo identification. Common acceptable identification includes a driver's license, state ID card, or passport.</p>
+            <h4>What Should I Bring to My Appointment</h4>
+            <p>Bring the complete document ready for signature. Do not sign before the appointment unless specifically required. All signers must be present with valid photo ID.</p>
+            <h4>Can a Document Be Notarized if It Is Incomplete</h4>
+            <p>No. Texas law prohibits notarizing documents with blank spaces or incomplete sections. If documents are incomplete, the appointment will be canceled and travel fees still apply.</p>
+            <h4>Do All Signers Need to Be Present</h4>
+            <p>Yes. Every signer must appear before the notary at the same time unless the document specifically allows separate notarizations.</p>
+            <h4>What Happens if Someone Does Not Show Up</h4>
+            <p>The 15-minute waiting period begins at the scheduled appointment time. If the notarization has not begun within 15 minutes, the visit is treated as a completed service call and the deposit is non-refundable.</p>
+            <h4>What Happens if I Cancel My Appointment</h4>
+            <p>Appointments canceled less than 24 hours before the scheduled time are non-refundable.</p>
+            <h4>How Do Remote Online Notarizations Work</h4>
+            <p>Remote Online Notarization uses identity verification technology and live audio-video recording. Additional platform fees may apply and are the responsibility of the client.</p>
+            <h4>Do You Offer Discounts</h4>
+            <p>Yes. A 10 percent service discount is available for active military, veterans, first responders, educators, and seniors age 65 and older. Valid identification required at time of service.</p>
+            <h4>Do You Provide Witnesses</h4>
+            <p>Witness services are available by request and may include an additional service fee. Witnesses must present valid government-issued photo identification at the appointment.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-body-2">
+          <span class="acc-title">Why Trust Our Seal – About Us</span>
+          <span class="acc-plus" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion-body" id="acc-body-2" role="region">
+          <div class="accordion-inner">
+            <h4>Founded by Lacee &#8220;Sharee&#8221; Westlund</h4>
+            <p>Some people choose a career in public service. For Sharee Westlund, it was never a choice &#8212; it was simply who she is.</p>
+            <p>A lifelong Texan and proud Hood County resident, Sharee has spent decades showing up for her community in the ways that matter most.</p>
+            <p>Sharee holds a Bachelor of Business Administration from West Texas A&amp;M University and a Master of Science in Human Resource Management from Tarleton State University.</p>
+            <p>Round the Clock Notary was built on a simple belief: that when life calls for a notary &#8212; whether it is a real estate closing, a hospital bedside, or a late-night emergency &#8212; you deserve someone who is not only qualified, but trustworthy.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-body-3">
+          <span class="acc-title">Sealed Up &#8211; Terms &amp; Conditions</span>
+          <span class="acc-plus" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion-body" id="acc-body-3" role="region">
+          <div class="accordion-inner">
+            <h4>Service Description</h4>
+            <p>Round The Clock Notary provides mobile notary and remote online notarization services in accordance with Texas law. The notary does not represent any party in the transaction and does not participate in the legal content of documents.</p>
+            <h4>Legal Advice Disclaimer</h4>
+            <p>The notary public is not an attorney and does not provide legal advice. If legal advice is required, consult a licensed attorney before scheduling service.</p>
+            <h4>Deposit and Appointment Policy</h4>
+            <p>A deposit is required to secure all appointments. It becomes non-refundable upon cancellation less than 24 hours before the appointment, signer failure to appear, or inability to complete due to missing identification or incomplete documents.</p>
+            <h4>Travel Fees</h4>
+            <p>Travel fees apply once the notary begins travel and are non-refundable even if the notarization cannot be completed.</p>
+            <h4>Limitation of Liability</h4>
+            <p>Liability is limited to the lesser of: (a) total fees paid for the specific service, or (b) the applicable E&amp;O insurance limits.</p>
+            <h4>Governing Law</h4>
+            <p>Governed by the laws of the State of Texas. Disputes submitted to good-faith mediation in Hood County, Texas first. Rev. 03/2026.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-body-4">
+          <span class="acc-title">Clock Master &#8211; Certifications</span>
+          <span class="acc-plus" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion-body" id="acc-body-4" role="region">
+          <div class="accordion-inner">
+            <ul>
+              <li>Texas Commissioned Notary Public</li>
+              <li>Remote Online Notary Certification Texas</li>
+              <li>National Notary Association Certified Notary Signing Agent</li>
+              <li>NNA Background Screened Notary</li>
+              <li>Loan Signing Agent Certification</li>
+              <li>Real Estate Loan Document Training</li>
+              <li>Remote Online Notary Technology Certification</li>
+              <li>Electronic Notary Training</li>
+              <li>Mortgage Loan Closing Training</li>
+              <li>Identity Verification and Fraud Prevention Training</li>
+              <li>Continuing Notary Education Courses</li>
+              <li>Notary Errors and Omissions Insurance</li>
+              <li>Texas Required Notary Surety Bond</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-body-5">
+          <span class="acc-title">By The Book &#8211; Legal Notices, Privacy &amp; Accessibility</span>
+          <span class="acc-plus" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion-body" id="acc-body-5" role="region">
+          <div class="accordion-inner">
+            <h4>Not an Attorney</h4>
+            <p>Not an attorney. Not legal advice.</p>
+            <h4>Copyright</h4>
+            <p>&copy; 2026 Round The Clock Notary. All rights reserved.</p>
+            <h4>Privacy Policy</h4>
+            <p>Information collected is used solely to provide the requested service. Personal information is not sold, rented, or shared with third parties for marketing purposes. Complies with Texas HB300 and applicable HIPAA requirements.</p>
+            <h4>Accessibility</h4>
+            <p>Mobile notary service traveling to the client location &#8212; supporting homebound clients, assisted living, hospitals, and hospice settings.</p>
+            <h4>Contact</h4>
+            <p>Round The Clock Notary &middot; ByPatience LLC<br>
+            <a href="#" id="accordion-email-link">roundtheclocknotary@gmail.com</a> &middot; 817-512-7217<br>
+            Rev. 03/2026</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="reviews-panel" aria-label="Customer reviews">
+      <div class="review-card">
+        <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">&#8220;Professional, punctual, and trustworthy. The notary walked us through the process, verified everything carefully, and made the signing simple and stress free. You want someone honest handling your documents. This service delivered exactly that.&#8221;</p>
+        <p class="review-attr">&#8212; Verified Client</p>
+      </div>
+      <div class="review-card">
+        <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">&#8220;Needed a document notarized late in the evening. The service was prompt and organized. The notary verified everything carefully and explained each step.&#8221;</p>
+        <p class="review-attr">&#8212; Verified Client</p>
+      </div>
+      <div class="review-card">
+        <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">&#8220;She came to the hospital on short notice. Professional, calm, and made an incredibly stressful situation so much easier.&#8221;</p>
+        <p class="review-attr">&#8212; Verified Client</p>
+      </div>
+      <div class="review-card">
+        <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">&#8220;The online booking and fee calculator made it so easy. No surprises. Showed up on time, knew exactly what she was doing.&#8221;</p>
+        <p class="review-attr">&#8212; Verified Client</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="photo-section">
+    <div class="photo-credit-wrap">
+      <a href="https://jenniferkochis.zenfoliosite.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://images.squarespace-cdn.com/content/v1/69ace2184fdcfc6bc95c3f6d/24637c62-49a3-4425-800a-51669b665f3c/Untitled+design+%2811%29.png" alt="Jennifer Kochis Photography" class="photo-sig">
+      </a>
+      <a href="https://jenniferkochis.zenfoliosite.com/" target="_blank" rel="noopener noreferrer" class="photo-credit-text">Photo Credit &#8212; Jennifer Kochis</a>
+    </div>
+  </div>
+
+</div>
+
+<footer role="contentinfo">
+  <div class="badges-grid" style="margin-bottom:32px;">
+    <div class="badge-item"><img src="https://images.squarespace-cdn.com/content/v1/69ace2184fdcfc6bc95c3f6d/3ff339da-4c39-4e75-b38e-db339391c343/Commissioned+Licenced.png" alt="Texas Licensed Notary"><span class="badge-title">Licensed</span><span class="badge-sub">Texas Secretary of State</span></div>
+    <div class="badge-item"><img src="https://images.squarespace-cdn.com/content/v1/69ace2184fdcfc6bc95c3f6d/db2b3946-19d6-4f28-b4b0-56551f5af837/Bonded.png" alt="Notary Bonded $10,000"><span class="badge-title">Bonded</span><span class="badge-sub">$10,000</span></div>
+    <div class="badge-item"><img src="https://images.squarespace-cdn.com/content/v1/69ace2184fdcfc6bc95c3f6d/fcccd073-dcd4-4979-8bdc-a5a4983a5f27/Insured.png" alt="Errors and Omissions Insurance"><span class="badge-title">Insured</span><span class="badge-sub">Errors &amp; Omissions Policy</span></div>
+    <div class="badge-item"><img src="https://images.squarespace-cdn.com/content/v1/69ace2184fdcfc6bc95c3f6d/6308566a-0c84-42ec-9181-15de56f6d0e1/Background.png" alt="Background Checked Notary"><span class="badge-title">Background</span><span class="badge-sub">Checked</span></div>
+    <div class="badge-item"><img src="https://images.squarespace-cdn.com/content/v1/69ace2184fdcfc6bc95c3f6d/fa65b718-2797-4c01-a9c2-9e269b5b0235/Certified+Loan+Notary.png" alt="Certified Loan Signing Agent"><span class="badge-title">Certified</span><span class="badge-sub">Loan Signer</span></div>
+    <div class="badge-item"><img src="https://images.squarespace-cdn.com/content/v1/69ace2184fdcfc6bc95c3f6d/d016a43c-2379-4831-a419-5d885d2afdc8/Texas+RON.png" alt="Texas Remote Online Notary Certified"><span class="badge-title">Texas &#8211; RON</span><span class="badge-sub">Remote Online Notary</span></div>
+    <div class="badge-item"><img src="https://images.squarespace-cdn.com/content/v1/69ace2184fdcfc6bc95c3f6d/b32994c5-f38e-4665-89cd-d7d586dfa659/ChatGPT+Image+Mar+11%2C+2026%2C+02_51_01+AM.png" alt="HIPAA Compliant Notary"><span class="badge-title">Certified</span><span class="badge-sub">HIPAA Compliant</span></div>
+  </div>
+  <div class="badges-grid">
+    <div class="badge-item"><img src="https://images.squarespace-cdn.com/content/v1/69ace2184fdcfc6bc95c3f6d/b5219a3c-bc9b-4f73-b778-e26f60c60f8e/National+Notary+Association+Member.png" alt="Member American Association of Notaries"><span class="badge-title">Member</span><span class="badge-sub">American Association of Notaries</span></div>
+    <div class="badge-item"><img src="https://images.squarespace-cdn.com/content/v1/69ace2184fdcfc6bc95c3f6d/890df9ed-8174-40e8-bf1a-c94c50df817e/ChatGPT+Image+Mar+11%2C+2026%2C+02_42_28+AM.png" alt="Member National Association of Notaries"><span class="badge-title">Member</span><span class="badge-sub">National Association of Notaries</span></div>
+    <div class="badge-item"><img src="https://images.squarespace-cdn.com/content/v1/69ace2184fdcfc6bc95c3f6d/6f36daef-86a8-41f2-a25c-f86a51589fdc/Chamber+Member.png" alt="Member National Society of Notaries"><span class="badge-title">Member</span><span class="badge-sub">National Society of Notaries</span></div>
+    <div class="badge-item"><img src="https://images.squarespace-cdn.com/content/v1/69ace2184fdcfc6bc95c3f6d/e3e24c29-dddf-4e63-a8fc-6f2b9e357677/BBB.png" alt="Granbury Chamber of Commerce Member"><span class="badge-title">Member</span><span class="badge-sub">Granbury Chamber of Commerce</span></div>
+  </div>
+  <div class="footer-divider" aria-hidden="true"></div>
+  <div class="footer-bar">
+    <div class="footer-links">
+      <a href="https://laceesharee.github.io/quote-booking/">Free Quote</a>
+      <a href="https://laceesharee.github.io/quote-booking/">Book Now</a>
+      <a href="tel:8175127217">817-512-7217</a>
+      <a href="#" id="footer-email-link">Email Us</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/roundtheclocknotary" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Round The Clock Notary on Facebook">
+        <img src="facebook_png.png" alt="Facebook">
+      </a>
+      <a href="https://www.linkedin.com/company/roundtheclocknotary" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Round The Clock Notary on LinkedIn">
+        <img src="linkedin_logo.png" alt="LinkedIn">
       </a>
     </div>
-    <div>
-      <h1>Round the Clock Notary</h1>
-      <div class="tagline">
-        <span class="tagline-line"></span>
-        <span>Hood County, Texas</span>
-        <span class="tagline-line r"></span>
-      </div>
-      <div class="sub-tag">Available When It Matters Most &middot; Around the Clock</div>
-    </div>
-  </div>
-</header>
-<div class="gold-rule"></div>
-
-<!-- ── POLICY BAR ── -->
-<div class="not-booking-bar">
-  <div class="nbb-line">
-    <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-thumbtack.png" class="nbb-ic" style="height:13px;width:13px" alt="">
-    Deposit applied to balance &mdash; non-refundable if canceled &lt;24 hrs
-  </div>
-  <div class="nbb-line">
-    <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-van.png" class="nbb-ic" style="height:11px;width:auto" alt="">
-    Travel fee applies once notary is en route &mdash; non-refundable
-  </div>
-</div>
-
-<div class="wrapper">
-  <!-- Running total — Steps 2-7 only -->
-  <div class="rt" id="runningTotal" style="display:none;position:sticky;top:0;z-index:100">
-    <div class="rt-title">Running Total Estimate</div>
-    <div class="rt-lines" id="rtLines"><div class="rt-line"><span style="color:rgba(255,255,255,.28)">No items yet</span></div></div>
-    <div class="rt-div"></div>
-    <div class="rt-total-row">
-      <span class="rt-total-label">Estimated Total</span>
-      <span class="rt-total-val"><sup>$</sup><span id="rtTotalNum">0.00</span></span>
-    </div>
-  </div>
-
-  <!-- STEP 1: Location -->
-  <div class="step active" id="step1">
-    <div class="card">
-      <div class="card-progress"><div class="card-step-label">STEP 1 OF 7 &mdash; SERVICE LOCATION</div><div class="card-prog-bg"><div class="card-prog-fill" style="width:0%"></div></div></div>
-      <div class="step-title">Where Should the Clock Stop?</div>
-      <div class="step-sub">Enter your appointment address. We travel to your home, office, hospital, or any location. Include a street address and zip code for accurate distance measurement.</div>
-
-      <!-- Booking mode toggle -->
-      <div class="mode-toggle">
-        <div class="mode-btn" id="modeInPerson" onclick="setBookingMode('inperson')">
-          <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-pin.png" alt="">
-          In-Person
-        </div>
-        <div class="mode-btn remote" id="modeRemote" onclick="setBookingMode('remote')">
-          <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon_RON.png" alt="">
-          Remote Online
-        </div>
-      </div>
-
-      <!-- RON notice -->
-      <div class="ron-notice" id="ronNotice">
-        No travel required. Your session will be conducted via secure video &mdash; a Texas-approved Remote Online Notarization platform. No address needed.
-      </div>
-
-      <!-- Travel info box — hidden until In-Person selected -->
-      <div class="travel-info-box" id="travelInfoBox" style="display:none">
-        <div class="tib-row"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-checkmark.png" class="tib-icon" alt=""><span>Within 5 miles of Granbury &mdash; <strong>Free travel</strong></span></div>
-        <div class="tib-row"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-checkmark.png" class="tib-icon" alt=""><span>5&ndash;20 miles &mdash; <strong>$0.725/mile round trip</strong> (first 5 mi free)</span></div>
-        <div class="tib-row"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-checkmark.png" class="tib-icon" alt=""><span>Over 20 miles &mdash; <strong>Full mileage rate, $75 deposit required</strong></span></div>
-      </div>
-
-      <div id="addrFields" style="display:none">
-      <input type="text" id="addressInput" placeholder="123 Oak Street, Granbury TX 76048" autocomplete="off">
-      <div class="addr-status" id="addrStatus"></div>
-      <div class="privacy-note"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-padlock.png" alt=""> Your information is used only to prepare your quote and schedule your appointment.</div>
-      </div>
-      <div class="nav" id="addrNavBtn" style="display:none">
-        <button class="btn-next" id="addrNextBtn">
-          <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-pin.png" id="addrBtnIcon" style="width:18px;height:18px;object-fit:contain;pointer-events:none" alt="">
-          <span id="addrBtnLabel">Find My Location &rarr;</span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- STEP 2: Service -->
-  <div class="step" id="step2">
-    <div class="card">
-      <div class="card-progress"><div class="card-step-label">STEP 2 OF 7 &mdash; SERVICE TYPE</div><div class="card-prog-bg"><div class="card-prog-fill" style="width:14.3%"></div></div></div>
-      <div class="step-title">Choose Your Timepiece</div>
-      <div class="step-sub">Select the service that fits your needs.</div>
-      <div class="opts">
-        <button class="opt-btn" data-service="second">
-          <div class="opt-left">
-            <div class="opt-chk"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-checkmark.png" alt=""></div>
-            <div class="opt-icon"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-second.png" alt=""></div>
-            <div><span class="opt-name">Second Hand</span><span class="opt-desc">Quick. Simple. 1 document &mdash; single notarial act, one visit.</span></div>
-          </div>
-          <div class="opt-right"><span class="opt-starting">Starting at</span><span class="opt-price">$30</span><span class="opt-fees">+ fees may apply</span></div>
-        </button>
-        <button class="opt-btn" data-service="minute">
-          <div class="opt-left">
-            <div class="opt-chk"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-checkmark.png" alt=""></div>
-            <div class="opt-icon"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-minute.png" alt=""></div>
-            <div><span class="opt-name">Minute Hand</span><span class="opt-desc">More documents. One visit &mdash; multiple notarial acts.</span></div>
-          </div>
-          <div class="opt-right"><span class="opt-starting">Starting at</span><span class="opt-price">$30</span><span class="opt-fees">+ fees may apply</span></div>
-        </button>
-        <button class="opt-btn" data-service="bedside">
-          <div class="opt-left">
-            <div class="opt-chk"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-checkmark.png" alt=""></div>
-            <div class="opt-icon"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-bedside.png" alt=""></div>
-            <div><span class="opt-name">Bedside Clock</span><span class="opt-desc">Hospitals and care facilities &mdash; compassionate, flat fee.</span></div>
-          </div>
-          <div class="opt-right"><span class="opt-price">$75</span><span class="opt-fees">flat fee</span></div>
-        </button>
-        <button class="opt-btn" data-service="closing">
-          <div class="opt-left">
-            <div class="opt-chk"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-checkmark.png" alt=""></div>
-            <div class="opt-icon"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-closing.png" alt=""></div>
-            <div><span class="opt-name">Closing Table</span><span class="opt-desc">Loan Signing and Real Estate Closing &mdash; all signatures included.</span><span class="opt-desc" style="margin-top:.3rem;color:#7a5c00;font-size:.75rem">Remote Online Notarization available for this service. Lender must authorize RON prior to appointment.</span></div>
-          </div>
-          <div class="opt-right"><span class="opt-price">$150</span><span class="opt-fees">flat fee</span></div>
-        </button>
-      </div>
-      <div class="nav">
-        <button class="btn-back" id="back2">&larr; Back</button>
-        <button class="btn-next" id="next2">Continue &rarr;</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- STEP 3: Add-Ons -->
-  <div class="step" id="step3">
-    <div class="card">
-      <div class="card-progress"><div class="card-step-label">STEP 3 OF 7 &mdash; ADD-ONS</div><div class="card-prog-bg"><div class="card-prog-fill" style="width:28.6%"></div></div></div>
-      <div class="step-title"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-thumbtack.png" alt=""> Fine Tune the Clock</div>
-      <div class="step-sub" id="step3Sub">All optional. Your running total updates as you go.</div>
-      <div class="ctr-row" id="print1Row">
-        <div class="ctr-left"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-stamp.png" class="ctr-icon" alt=""><div><div class="ctr-label">Single Time &middot; Color Print 1-Sided</div><div class="ctr-sub">$1.00 per page</div></div></div>
-        <div class="ctr-right"><div class="ctr-ctrl"><button class="ctr-btn" data-target="print1" data-dir="-1">&#8722;</button><div class="ctr-val" id="print1Val">0</div><button class="ctr-btn" data-target="print1" data-dir="1">&#43;</button></div><div class="ctr-price" id="print1Price">$0.00</div></div>
-      </div>
-      <div class="ctr-row" id="print2Row">
-        <div class="ctr-left"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-addon-double.png" class="ctr-icon" alt=""><div><div class="ctr-label">Double Time &middot; Duplex Full Color</div><div class="ctr-sub">$1.50 per page</div></div></div>
-        <div class="ctr-right"><div class="ctr-ctrl"><button class="ctr-btn" data-target="print2" data-dir="-1">&#8722;</button><div class="ctr-val" id="print2Val">0</div><button class="ctr-btn" data-target="print2" data-dir="1">&#43;</button></div><div class="ctr-price" id="print2Price">$0.00</div></div>
-      </div>
-      <div class="ctr-row" id="witnessRow">
-        <div class="ctr-left"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-addon-watch.png" class="ctr-icon" alt=""><div><div class="ctr-label">Watch The Clock &middot; Notary Witness</div><div class="ctr-sub">$20 per witness</div></div></div>
-        <div class="ctr-right"><div class="ctr-ctrl"><button class="ctr-btn" data-target="witness" data-dir="-1">&#8722;</button><div class="ctr-val" id="witnessVal">0</div><button class="ctr-btn" data-target="witness" data-dir="1">&#43;</button></div><div class="ctr-price" id="witnessPrice">$0.00</div></div>
-      </div>
-      <div class="ctr-row" id="extraTicksRow" style="display:none">
-        <div class="ctr-left"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-addon-extra.png" class="ctr-icon" alt=""><div><div class="ctr-label">Extra Ticks &middot; Additional Signatures</div><div class="ctr-sub">$10 each</div></div></div>
-        <div class="ctr-right"><div class="ctr-ctrl"><button class="ctr-btn" data-target="extraTicks" data-dir="-1">&#8722;</button><div class="ctr-val" id="extraTicksVal">0</div><button class="ctr-btn" data-target="extraTicks" data-dir="1">&#43;</button></div><div class="ctr-price" id="extraTicksPrice">$0.00</div></div>
-      </div>
-      <div class="ctr-row" id="minuteSealsRow" style="display:none">
-        <div class="ctr-left"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-addon-minute.png" class="ctr-icon" alt=""><div><div class="ctr-label">Minute Hand Seals &middot; Per Notary Stamp</div><div class="ctr-sub">$10 each</div></div></div>
-        <div class="ctr-right"><div class="ctr-ctrl"><button class="ctr-btn" data-target="minuteSeals" data-dir="-1">&#8722;</button><div class="ctr-val" id="minuteSealsVal">0</div><button class="ctr-btn" data-target="minuteSeals" data-dir="1">&#43;</button></div><div class="ctr-price" id="minuteSealsPrice">$0.00</div></div>
-      </div>
-      <div class="addon-divider"></div>
-      <!-- Digital Clock (E-Notary) — greyed out for Closing Table -->
-      <div class="toggle-row" id="digitalClockRow" onclick="toggleDigitalClock()">
-        <div class="toggle-left">
-          <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-electronic.png?v=3" class="ctr-icon" alt="">
-          <div>
-            <div class="ctr-label" style="display:flex;align-items:center;gap:.5rem">Digital Clock &middot; E-Notary <span class="ron-badge" id="ronBadge" style="display:none">RON &mdash; Lender Auth Required</span></div>
-            <div class="ctr-sub" id="digitalClockSub">$5.00 flat &mdash; electronic signature on your document</div>
-          </div>
-        </div>
-        <div style="display:flex;align-items:center;gap:.5rem">
-          <div class="toggle-switch" id="digitalClockSwitch"></div>
-          <div class="toggle-price" id="digitalClockPrice">$0.00</div>
-        </div>
-      </div>
-      <!-- Time Flies — Document Delivery -->
-      <div class="delivery-row" id="timeFlyRow">
-        <div class="delivery-header" onclick="toggleTimeFlies()">
-          <div class="ctr-left">
-            <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-delivery.png" class="ctr-icon" alt="">
-            <div>
-              <div class="ctr-label">Time Flies &middot; Document Delivery</div>
-              <div class="ctr-sub">$5.00 flat &mdash; choose your delivery method below</div>
-            </div>
-          </div>
-          <div class="delivery-toggle-wrap">
-            <div class="toggle-switch" id="timeFlySwitch"></div>
-            <div class="delivery-price" id="timeFlyPrice">$0.00</div>
-          </div>
-        </div>
-        <div class="delivery-methods" id="timeFlyMethods">
-          <div class="method-label">Select Delivery Method</div>
-          <div class="method-opts">
-            <button class="method-btn" id="methodEmail" onclick="selectDeliveryMethod('email')">
-              <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-electronic.png?v=3" alt="">
-              Email
-              <span class="method-note">Sent to your inbox</span>
-            </button>
-            <button class="method-btn" id="methodFax" onclick="selectDeliveryMethod('fax')">
-              <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-delivery.png" alt="">
-              Fax
-              <span class="method-note">To your fax number</span>
-            </button>
-            <button class="method-btn" id="methodMail" onclick="selectDeliveryMethod('mail')">
-              <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-delivery.png" alt="">
-              Mail
-              <span class="method-note">$5 + postage</span>
-            </button>
-          </div>
-          <div class="postage-notice" id="postageNotice">
-            <strong>Postage Note:</strong> All delivery methods are $5.00 flat. Mail also requires postage, billed at time of service based on weight and destination.
-          </div>
-        </div>
-      </div>
-      <div class="nav">
-        <button class="btn-back" id="back3">&larr; Back</button>
-        <button class="btn-next" id="next3">Continue &rarr;</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- STEP 4: Date & Time -->
-  <div class="step" id="step4">
-    <div class="card">
-      <div class="card-progress"><div class="card-step-label">STEP 4 OF 7 &mdash; DATE &amp; TIME</div><div class="card-prog-bg"><div class="card-prog-fill" style="width:42.9%"></div></div></div>
-      <div class="step-title"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-calendar.png" alt=""> Set the Clock</div>
-      <div class="step-sub">Choose how you&rsquo;d like to proceed.</div>
-      <div class="holiday-notice">
-        <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-flag.png" alt="">
-        <span><strong>Red Letter Days:</strong> Federal holidays include an additional +$50 fee. This will be applied automatically when you select a holiday date.</span>
-      </div>
-      <div class="tier-legend">
-        <div class="tier-row standard">
-          <div class="tier-left"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-clock.png" class="tier-icon" alt=""><div><span class="tier-name">Standard Business Hours</span><span class="tier-hours">8 AM &ndash; 5 PM Weekdays</span></div></div>
-          <span class="tier-surcharge">No Surcharge</span>
-        </div>
-        <div class="tier-row evening">
-          <div class="tier-left"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-moon.png" class="tier-icon" alt=""><div><span class="tier-name">Evening Hours &mdash; &ldquo;Off the Clock&rdquo;</span><span class="tier-hours">6 PM &ndash; 10 PM or Sat/Sun</span></div></div>
-          <span class="tier-surcharge">+$15</span>
-        </div>
-        <div class="tier-row late">
-          <div class="tier-left"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-sunmoon.png" class="tier-icon" alt=""><div><span class="tier-name">Overnight &mdash; &ldquo;Clock Strikes Midnight&rdquo;</span><span class="tier-hours">10 PM &ndash; 7 AM Any Day</span></div></div>
-          <span class="tier-surcharge">+$50</span>
-        </div>
-      </div>
-      <div class="select-one-label">Select One</div>
-      <div class="tab-bar">
-        <button class="tab-btn" id="tab-book" onclick="toggleTab('book')"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-calendar.png" alt=""> Schedule Appointment</button>
-        <button class="tab-btn" id="tab-quote" onclick="toggleTab('quote')"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-scroll.png" alt=""> Free Quote</button>
-      </div>
-      <div class="tab-content" id="tc-book">
-        <label class="field-label" style="margin-top:.75rem;display:block">
-          <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-calendar.png" style="width:14px;height:14px;object-fit:contain;pointer-events:none;vertical-align:middle;margin-right:.3rem" alt="">
-          Appointment Date <span class="req">*</span>
-        </label>
-        <div class="date-wrap">
-          <input type="date" id="apptDate" min="">
-          <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-calendar.png" class="date-cal-icon" alt="">
-        </div>
-        <button id="checkAvailBtn" class="btn-check">Check Availability &rarr;</button>
-        <div id="rushNotice" style="display:none;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.4);border-left:3px solid var(--gold);border-radius:8px;padding:.75rem 1rem;margin-bottom:.75rem;font-size:.82rem;color:#3d2e0f;line-height:1.6;align-items:flex-start;gap:.6rem">
-          <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-rush.png" style="width:24px;height:auto;object-fit:contain;flex-shrink:0;margin-top:.1rem;pointer-events:none" alt="">
-          <div><strong>Rush Hour slots available (+$100).</strong> Your appointment is not confirmed until you receive a text or email from Round The Clock Notary. For immediate service call or text <strong>817-512-7217</strong>.</div>
-        </div>
-        <div id="slotsList" class="slot-grid"></div>
-        <div class="late-notice" id="lateNightNotice" style="display:none">
-          <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-moon-crescent.png" alt="">
-          <span><strong>Late night appointments</strong> subject to availability confirmation. You will receive a text within 30 minutes.</span>
-        </div>
-        <div class="selected-slot-box" id="selectedSlotDisplay">
-          <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-checkmark.png" alt="">
-          <span id="selectedSlotText"></span>
-        </div>
-        <div id="slotError" style="display:none;font-size:.8rem;color:var(--red);margin-top:.5rem"></div>
-        <div class="step5-faq-section">
-          <div class="step5-faq-hdr">Before Your Appointment</div>
-          <div class="step5-faq-link-box">
-            <p>Review our preparation guide so you know exactly what to bring and what to expect.</p>
-            <button class="step5-faq-link-btn" onclick="openFAQModal()">Before the Clock Starts &rarr;</button>
-          </div>
-          <div style="text-align:right;margin-top:.35rem">
-            <a href="https://www.roundtheclocknotary.com/#before-the-clock-starts" target="_blank" style="font-size:.72rem;color:var(--navy);font-weight:600;text-decoration:underline;font-family:'Cinzel',serif;letter-spacing:.04em">View on our website &rarr;</a>
-          </div>
-          <div class="faq-ack-box" id="faqAckRow" style="cursor:default">
-            <div class="faq-ack-chk" id="faqAckChk"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-checkmark.png" alt=""></div>
-            <div class="faq-ack-text">I have reviewed the appointment preparation guide and understand what to bring to my appointment.</div>
-          </div>
-        </div>
-        <div class="nav">
-          <button class="btn-back" id="back4">&larr; Back</button>
-          <button class="btn-next" id="next4" disabled style="opacity:.5">Continue &rarr;</button>
-        </div>
-      </div>
-      <div class="tab-content" id="tc-quote">
-        <p style="font-size:.85rem;color:#3d3520;margin:.75rem 0 .85rem;line-height:1.6">Select a general time frame to see how it affects your estimate.</p>
-        <div class="range-cards">
-          <div class="range-card standard" onclick="selectRange(this,'standard',0)">
-            <div class="range-card-left"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-clock.png" class="rc-icon" alt=""><div><span class="rc-name">Standard Business Hours</span><span class="rc-hours">8 AM &ndash; 5 PM Weekdays</span></div></div>
-            <span class="rc-surcharge">No surcharge</span>
-          </div>
-          <div class="range-card evening" onclick="selectRange(this,'offclock',15)">
-            <div class="range-card-left"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-moon.png" class="rc-icon" alt=""><div><span class="rc-name">Evening Hours &mdash; &ldquo;Off the Clock&rdquo;</span><span class="rc-hours">6 PM &ndash; 10 PM or Sat/Sun</span></div></div>
-            <span class="rc-surcharge">+$15</span>
-          </div>
-          <div class="range-card late" onclick="selectRange(this,'midnight',50)">
-            <div class="range-card-left"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-sunmoon.png" class="rc-icon" alt=""><div><span class="rc-name">Overnight &mdash; &ldquo;Clock Strikes Midnight&rdquo;</span><span class="rc-hours">10 PM &ndash; 7 AM Any Day</span></div></div>
-            <span class="rc-surcharge">+$50</span>
-          </div>
-        </div>
-        <div class="quote-btns">
-          <button class="qpb gold" onclick="toggleTab('book')"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-reset.png" alt=""> Continue to Booking &rarr;</button>
-          <button class="qpb outline" onclick="showQuoteModal()"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-scroll.png" alt=""> Preview My Quote</button>
-          <button class="qpb navy" id="leadContactBtn"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-questions.png" alt=""> Have Questions? Contact a Notary Specialist</button>
-          <div class="lead-form" id="leadContactForm">
-            <div style="font-family:'Cinzel',serif;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-bottom:.65rem">We'll reach out shortly</div>
-            <div style="font-size:.78rem;color:var(--muted);margin-bottom:.75rem;line-height:1.6">Before submitting, you may find your answer in our <a href="https://www.roundtheclocknotary.com/#before-the-clock-starts" target="_blank" style="color:var(--navy);font-weight:600;text-decoration:underline">FAQ &mdash; Before the Clock Starts</a>.</div>
-            <input type="text" id="leadName" placeholder="Your Name *">
-            <input type="email" id="leadEmail" placeholder="Email Address *">
-            <textarea id="leadMsg" placeholder="Question or note (optional)"></textarea>
-            <div class="lead-status" id="leadStatus"></div>
-            <button class="btn-next" id="leadSubmitBtn" style="width:100%"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-padlock.png" style="width:16px;height:16px;object-fit:contain;pointer-events:none" alt=""> Send My Info &rarr;</button>
-          </div>
-          <button class="qpb ghost" onclick="startOver()"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-reset.png" alt=""> Start Over</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- STEP 5 (formerly 6): Contact + TOS -->
-  <div class="step" id="step6">
-    <div class="card">
-      <div class="card-progress"><div class="card-step-label">STEP 5 OF 7 &mdash; YOUR INFORMATION</div><div class="card-prog-bg"><div class="card-prog-fill" style="width:57.1%"></div></div></div>
-      <div class="step-title">Who&#8217;s Behind the Clock?</div>
-      <div class="step-sub">Required to confirm your appointment and send your confirmation text.</div>
-      <div class="not-confirmed-notice">
-        <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-caution.png" alt="">
-        <p><strong>Your appointment request is pending</strong> until you receive a confirmation text from Round The Clock Notary at <strong>817-512-7217</strong>. Completing payment generates your booking reference number &mdash; your confirmation text will reference that same number.</p>
-      </div>
-      <label class="field-label" for="clientName">Full Name <span class="req">*</span></label>
-      <input type="text" id="clientName" placeholder="Jane Smith">
-      <div class="addr-status" id="nameStatus"></div>
-      <label class="field-label" for="clientPhone">Phone <span class="req">*</span></label>
-      <input type="tel" id="clientPhone" placeholder="(817) 555-0100">
-      <div class="addr-status" id="phoneStatus"></div>
-      <label class="field-label" for="clientEmail">Email <span class="req">*</span></label>
-      <input type="email" id="clientEmail" placeholder="you@example.com">
-      <div class="addr-status" id="emailStatus"></div>
-      <div class="tos-inline">
-        <div class="tos-hdr"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-scroll.png" alt=""> Terms of Service Agreement</div>
-        <div class="tos-scroll">
-          <p>By scheduling an appointment, paying a deposit, or receiving services from Round The Clock Notary, you agree to the following terms and conditions in full.</p>
-          <h4>Service Description</h4><p>Round The Clock Notary provides mobile notary and remote online notarization services in accordance with Texas law. The notary does not represent any party and does not participate in the legal content of documents.</p>
-          <h4>Legal Advice Disclaimer</h4><p>The notary public is not an attorney and does not provide legal advice. Consult a licensed attorney if legal guidance is needed.</p>
-          <h4>Identification Requirements</h4><p>All signers must present valid government-issued photo ID. The name on the ID must match the document being notarized.</p>
-          <h4>Deposit &amp; Appointment Policy</h4><p>Deposits are non-refundable if cancellation is less than 24 hours, signer fails to appear, or appointment cannot be completed due to missing ID or incomplete documents.</p>
-          <h4>Travel Fees</h4><p>Travel fees apply once the notary begins travel and are non-refundable even if the notarization cannot be completed.</p>
-          <h4>Limitation of Liability</h4><p>Liability is limited to the lesser of total fees paid or the notary E&amp;O insurance limits.</p>
-          <h4>No Call / No Show</h4><p>If the notary is not contacted within 15 minutes of the scheduled appointment time, the appointment is a no-show and the deposit is forfeited.</p>
-          <h4>Governing Law</h4><p>This agreement is governed by Texas law. Disputes shall be mediated in Hood County, Texas before any legal action.</p>
-        </div>
-        <div class="tos-agree-row" id="tosAgreeRow">
-          <div class="tos-chk" id="tosChk"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-checkmark.png" alt=""></div>
-          <div class="tos-agree-text">I have read and agree to the Round The Clock Notary Terms of Service Agreement.</div>
-        </div>
-      </div>
-      <!-- Time Flies Delivery — conditional, shown only if S.timeFlies -->
-      <div id="tfDeliverySection" class="tf-delivery-section" style="display:none">
-        <div class="tf-delivery-hdr"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-delivery.png" alt=""> Time Flies &mdash; Delivery Details</div>
-        <div class="tf-method-opts">
-          <button class="tf-method-btn" id="tfBtnEmail" onclick="selectTFMethod('email')">Email</button>
-          <button class="tf-method-btn" id="tfBtnFax" onclick="selectTFMethod('fax')">Fax</button>
-          <button class="tf-method-btn" id="tfBtnMail" onclick="selectTFMethod('mail')">Mail</button>
-        </div>
-        <!-- Fax fields -->
-        <div class="tf-fields" id="tfFaxFields">
-          <label class="field-label" for="tfFax">Fax Number <span class="req">*</span></label>
-          <input type="tel" id="tfFax" placeholder="(817) 555-0100">
-          <div class="addr-status" id="tfFaxStatus"></div>
-        </div>
-        <!-- Email fields -->
-        <div class="tf-fields" id="tfEmailFields">
-          <label class="field-label" for="tfEmail">Delivery Email Address <span class="req">*</span></label>
-          <input type="email" id="tfEmail" placeholder="documents@example.com">
-          <div class="addr-status" id="tfEmailStatus"></div>
-        </div>
-        <!-- Mail fields -->
-        <div class="tf-fields" id="tfMailFields">
-          <label class="field-label" for="tfMailName">Recipient Name <span class="req">*</span></label>
-          <input type="text" id="tfMailName" placeholder="Jane Smith">
-          <label class="field-label" for="tfMailAddr">Street Address <span class="req">*</span></label>
-          <input type="text" id="tfMailAddr" placeholder="123 Main St">
-          <label class="field-label" for="tfMailCity">City <span class="req">*</span></label>
-          <input type="text" id="tfMailCity" placeholder="Granbury">
-          <div style="display:flex;gap:.6rem">
-            <div style="flex:0 0 100px">
-              <label class="field-label" for="tfMailState">State <span class="req">*</span></label>
-              <input type="text" id="tfMailState" placeholder="TX" maxlength="2" style="text-transform:uppercase">
-            </div>
-            <div style="flex:1">
-              <label class="field-label" for="tfMailZip">ZIP <span class="req">*</span></label>
-              <input type="text" id="tfMailZip" placeholder="76048" maxlength="10">
-            </div>
-          </div>
-          <label class="field-label" style="margin-top:.5rem">Shipping Method <span class="req">*</span></label>
-          <div class="ship-cards" id="shipCards">
-            <div class="ship-card" onclick="selectShipping(this,'usps-first')" data-service="usps-first">
-              <div class="ship-card-left"><div class="ship-card-chk"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-checkmark.png" alt=""></div><div><div class="ship-card-name">USPS First Class</div><div class="ship-card-transit">3&ndash;5 business days</div></div></div>
-              <div class="ship-card-right"><div class="ship-card-est">~$0.73&ndash;$1.50</div><div class="ship-card-note">Est. at service</div></div>
-            </div>
-            <div class="ship-card" onclick="selectShipping(this,'usps-priority')" data-service="usps-priority">
-              <div class="ship-card-left"><div class="ship-card-chk"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-checkmark.png" alt=""></div><div><div class="ship-card-name">USPS Priority Mail</div><div class="ship-card-transit">1&ndash;3 business days</div></div></div>
-              <div class="ship-card-right"><div class="ship-card-est">~$9.85</div><div class="ship-card-note">Est. at service</div></div>
-            </div>
-            <div class="ship-card" onclick="selectShipping(this,'ups-ground')" data-service="ups-ground">
-              <div class="ship-card-left"><div class="ship-card-chk"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-checkmark.png" alt=""></div><div><div class="ship-card-name">UPS Ground</div><div class="ship-card-transit">3&ndash;5 business days</div></div></div>
-              <div class="ship-card-right"><div class="ship-card-est">~$12&ndash;$15</div><div class="ship-card-note">Est. at service</div></div>
-            </div>
-            <div class="ship-card" onclick="selectShipping(this,'ups-2day')" data-service="ups-2day">
-              <div class="ship-card-left"><div class="ship-card-chk"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-checkmark.png" alt=""></div><div><div class="ship-card-name">UPS 2-Day</div><div class="ship-card-transit">2 business days</div></div></div>
-              <div class="ship-card-right"><div class="ship-card-est">~$28&ndash;$35</div><div class="ship-card-note">Est. at service</div></div>
-            </div>
-            <div class="ship-card" onclick="selectShipping(this,'fedex-ground')" data-service="fedex-ground">
-              <div class="ship-card-left"><div class="ship-card-chk"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-checkmark.png" alt=""></div><div><div class="ship-card-name">FedEx Ground</div><div class="ship-card-transit">3&ndash;5 business days</div></div></div>
-              <div class="ship-card-right"><div class="ship-card-est">~$11&ndash;$14</div><div class="ship-card-note">Est. at service</div></div>
-            </div>
-            <div class="ship-card" onclick="selectShipping(this,'fedex-overnight')" data-service="fedex-overnight">
-              <div class="ship-card-left"><div class="ship-card-chk"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-checkmark.png" alt=""></div><div><div class="ship-card-name">FedEx Overnight</div><div class="ship-card-transit">Next business day</div></div></div>
-              <div class="ship-card-right"><div class="ship-card-est">~$45&ndash;$55</div><div class="ship-card-note">Est. at service</div></div>
-            </div>
-          </div>
-          <div class="ship-postage-note">Shipping is billed at actual cost at time of service based on final weight and destination. Estimates shown are for a standard document packet from Granbury, TX.</div>
-          <div class="addr-status" id="tfMailStatus"></div>
-        </div>
-        <!-- Bring to appointment -->
-        <div class="tf-bring-row" id="tfBringRow" onclick="selectTFMethod('bring')">
-          <div class="tf-bring-chk" id="tfBringChk"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-checkmark.png" alt=""></div>
-          <div class="tf-bring-label">I will bring my delivery information to the appointment</div>
-        </div>
-      </div>
-      <div class="note-notary-wrap">
-        <label class="note-notary-label" for="noteNotary">Notes &amp; Special Instructions <span style="font-family:'DM Sans',sans-serif;font-weight:400;color:var(--muted);letter-spacing:0;text-transform:none;font-size:.7rem">(Optional)</span></label>
-        <textarea class="note-notary-textarea" id="noteNotary" maxlength="500" placeholder="Gate code, parking instructions, special requests, or anything else your notary should know..."></textarea>
-        <div class="note-notary-counter"><span id="noteNotaryCount">0</span>/500</div>
-      </div>
-      <div class="privacy-note" style="margin-top:.75rem"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-padlock.png" alt=""> Your information is used only to prepare your quote and schedule your appointment. We never sell or share your data.</div>
-      <div class="nav">
-        <button class="btn-back" id="back6">&larr; Back</button>
-        <button class="btn-next" id="next6" disabled style="opacity:.5">
-          <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-padlock.png" style="width:16px;height:16px;object-fit:contain;pointer-events:none;margin-right:.25rem" alt=""> Pay Deposit &rarr;
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- STEP 7: Pay Deposit -->
-  <div class="step" id="step7">
-    <div class="card">
-      <div class="card-progress"><div class="card-step-label">STEP 6 OF 7 &mdash; SECURE YOUR SPOT</div><div class="card-prog-bg"><div class="card-prog-fill" style="width:71.4%"></div></div></div>
-      <div class="step-title"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-paypal.png" alt=""> Pay Your Deposit</div>
-      <div class="step-sub">Your deposit holds your appointment and is applied toward your balance due at signing.</div>
-      <div class="not-confirmed-notice">
-        <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-caution.png" alt="">
-        <p><strong>Your appointment request is pending</strong> until you receive a confirmation text from Round The Clock Notary at <strong>817-512-7217</strong>. Completing payment generates your booking reference number &mdash; your confirmation text will reference that same number.</p>
-      </div>
-      <div class="rt" style="margin-bottom:1.25rem">
-        <div class="rt-title">Appointment Summary</div>
-        <div class="rt-lines" id="paymentSummaryLines"></div>
-        <div class="rt-div"></div>
-        <div id="apptTimeDisplay" style="margin-bottom:.5rem;font-family:Cinzel,serif;font-size:.78rem;color:rgba(201,168,76,.9)"></div>
-        <div class="rt-total-row"><span class="rt-total-label">Estimated Total</span><span class="rt-total-val"><sup>$</sup><span id="paymentTotal">0.00</span></span></div>
-        <div style="margin-top:.5rem;display:flex;justify-content:space-between">
-          <span style="font-family:Cinzel,serif;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45)">Deposit Due Now</span>
-          <span style="font-family:Cinzel,serif;font-size:1.4rem;color:#e8c96a" id="paymentDepositAmt">$30.00</span>
-        </div>
-        <div style="margin-top:.25rem;display:flex;justify-content:space-between">
-          <span style="font-family:Cinzel,serif;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45)">Est. Due at Signing</span>
-          <span style="font-family:Cinzel,serif;font-size:.95rem;color:rgba(255,255,255,.75)" id="paymentDueAmt">$0.00</span>
-        </div>
-      </div>
-      <div id="longDistNotice" style="display:none;background:rgba(139,31,47,.07);border:1px solid rgba(139,31,47,.2);border-left:3px solid #8b1f2f;border-radius:8px;padding:.85rem 1rem;margin-bottom:1rem;font-size:.82rem;color:#3a1820;line-height:1.6">
-        <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-caution.png" style="width:14px;height:16px;object-fit:contain;margin-right:.3rem;pointer-events:none" alt=""> <strong>Long Distance Appointment</strong> &mdash; A $75.00 deposit is required.
-      </div>
-      <div style="margin-bottom:1rem">
-        <div class="paypal-header">
-          <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-paypal.png" alt="PayPal">
-          <span class="paypal-header-text">Secure Payment</span>
-        </div>
-        <div id="paypal-button-container"></div>
-        <div id="paypalMockBtn" style="display:none;text-align:center;margin-top:.5rem">
-          <button onclick="handleMockPayment()" style="width:100%;padding:1rem;background:#0070ba;color:#fff;border:none;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;font-family:DM Sans,sans-serif">
-            <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-paypal.png" style="width:16px;height:16px;object-fit:contain;pointer-events:none" alt="">
-            <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-padlock.png" style="width:14px;height:14px;object-fit:contain;pointer-events:none" alt="">
-            Pay Deposit &nbsp;<span id="mockDepositLabel">$30.00</span>
-          </button>
-        </div>
-      </div>
-      <div class="nav">
-        <button class="btn-back" id="back7">&larr; Back</button>
-        <button class="btn-ghost" id="printQuote7" onclick="printModalQuote()"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-printer.png" style="width:15px;height:15px;object-fit:contain;pointer-events:none;vertical-align:middle;margin-right:.3rem" alt=""> Print Quote</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- STEP 8: Thank You -->
-  <div class="step" id="step8">
-    <div class="sum-card">
-      <div class="sum-hdr">
-        <div class="sum-logo"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/logo.png" alt="Round the Clock Notary"></div>
-        <div class="sum-badge">&#10003; Request Received</div>
-        <div style="font-family:Cinzel,serif;font-size:.65rem;letter-spacing:.15em;color:rgba(201,168,76,.6);margin:.25rem 0;position:relative" id="tyBookingId"></div>
-        <div style="font-family:Cinzel,serif;font-size:1.4rem;color:#e8c96a;position:relative;margin:.5rem 0 .25rem">Thank You, <span id="tyName"></span>!</div>
-        <div style="font-size:.88rem;color:rgba(255,255,255,.7);position:relative">Your deposit has been received and your appointment request is pending.</div>
-        <div style="margin-top:.75rem;position:relative">
-          <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-hourglass.png" style="width:44px;height:44px;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(201,168,76,.4));pointer-events:none" alt="">
-        </div>
-      </div>
-      <div class="sum-body">
-        <div class="ty-appt">
-          <div class="ty-appt-label">Requested Appointment</div>
-          <div class="ty-appt-val" id="tyApptVal"></div>
-          <div style="font-size:.78rem;color:rgba(255,255,255,.5);margin-top:.25rem" id="tyServiceVal"></div>
-          <div style="font-family:Cinzel,serif;font-size:.65rem;letter-spacing:.12em;color:rgba(201,168,50,.5);margin-top:.35rem">Reference # &nbsp;<span id="tyBookingIdAppt" style="color:rgba(201,168,76,.8)"></span></div>
-        </div>
-        <div class="ty-disclaimer">
-          <p><strong>Booking Request Received &mdash; Pending Acceptance.</strong> Your deposit is secured and your booking reference number is confirmed.</p>
-          <p style="margin-top:.5rem">This reference number will appear on your confirmation text once your appointment is accepted. A notary will reach out within one hour to confirm availability. If you selected a Rush Hour slot, confirmation is on a first-response basis.</p>
-          <p style="margin-top:.5rem">Questions? Call or text <strong>817-512-7217</strong>.</p>
-        </div>
-        <div class="sum-sec" style="margin-top:1rem">Quote Summary</div>
-        <div id="sumLines8"></div>
-        <div class="sum-div"></div>
-        <div class="sum-tot-row"><span class="stl">Total Estimate</span><span class="stv" id="sumTotal8">$0.00</span></div>
-        <div class="sum-tot-row"><span class="stl">Deposit Paid</span><span class="stv green" id="sumDepositPaid8">$0.00</span></div>
-        <div class="sum-tot-row"><span class="stl">Est. Due at Signing</span><span class="stv gold" id="sumDue8">$0.00</span></div>
-        <div class="disc" style="margin-top:1rem"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-caution.png" alt=""><div class="disc-text"><strong>Estimate only.</strong> Final charges calculated at time of service.</div></div>
-        <div class="policy"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-restricted.png" alt=""><div class="policy-text"><strong style="color:var(--red)">No Call / No Show:</strong> Deposit forfeited if notary not contacted within 15 minutes of scheduled appointment time.</div></div>
-        <div style="display:flex;gap:.75rem;margin-top:1.1rem">
-          <button class="act-btn ghost" id="printBtn8" onclick="window.print()"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-printer.png" alt=""> Print / Save Quote</button>
-          <button class="act-btn outline" id="startOverBtn" onclick="startOver()"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-reset.png" alt=""> New Quote</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div><!-- /.wrapper -->
-
-
-<!-- FAQ Prep Modal -->
-<div class="faq-modal-overlay" id="faqModal">
-  <div class="faq-modal">
-    <div class="faq-modal-hdr">
-      <div style="width:64px;height:64px;margin:0 auto .6rem;position:relative;z-index:2"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/logo.png" style="width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 2px 12px rgba(201,168,76,.4))" alt="Round the Clock Notary"></div>
-      <div class="faq-modal-title">Before the Clock Starts</div>
-      <div class="faq-modal-sub">Scroll to the bottom to confirm you have read the preparation guide.</div>
-      <button class="faq-modal-close" onclick="closeFAQModal()">&#x2715;</button>
-    </div>
-    <div class="faq-modal-body" id="faqModalBody">
-      <div class="faq-item">
-        <div class="faq-q">What Identification Is Required</div>
-        <div class="faq-a">Every signer must present valid government-issued photo identification at the appointment. Common acceptable identification includes a driver&rsquo;s license, state ID card, or passport. The name on the identification should reasonably match the name on the document.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What Should I Bring to My Appointment</div>
-        <div class="faq-a">Bring the complete document ready for signature. Do not sign the document before the appointment unless the document instructions specifically require a prior signature. Each signer must bring valid government-issued photo identification. All required signers must be present at the appointment. If witnesses are required for the document, bring the required witnesses unless witness service was requested during booking.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Can a Document Be Notarized if It Is Incomplete</div>
-        <div class="faq-a">No. Texas law prohibits notarizing documents with blank spaces or incomplete sections. All documents must be complete and ready for signature at the time of the appointment. If documents are incomplete, the appointment will be canceled and travel fees still apply.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Do All Signers Need to Be Present</div>
-        <div class="faq-a">Yes. Every signer must appear before the notary at the same time unless the document specifically allows separate notarizations. The notary must personally witness each signature.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What Happens if Someone Does Not Show Up</div>
-        <div class="faq-a">The 15-minute waiting period begins at the scheduled appointment time. If the signer has not appeared and the notarization has not begun within 15 minutes of the scheduled appointment time, the visit is treated as a completed service call. The deposit is non-refundable in this circumstance.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What Happens if I Cancel My Appointment</div>
-        <div class="faq-a">Appointments canceled less than 24 hours before the scheduled time are non-refundable. Deposits secure the appointment time and travel schedule. If documents are incomplete or identification is missing at the time of the appointment, a new appointment and new deposit will be required.</div>
-      </div>
-      <div style="text-align:center;padding:.75rem 0 .25rem;border-top:1px solid var(--border);margin-top:.5rem">
-        <a href="https://www.roundtheclocknotary.com/#before-the-clock-starts" target="_blank" style="font-size:.75rem;color:var(--navy);font-weight:600;text-decoration:underline;font-family:'Cinzel',serif;letter-spacing:.05em">Visit Our Website for FAQ &rarr;</a>
-      </div>
-    </div>
-    <div class="faq-modal-footer">
-      <span class="faq-scroll-hint" id="faqScrollHint">Scroll down to continue &darr;</span>
-      <button class="faq-modal-done" id="faqModalDoneBtn" onclick="closeFAQModal()">I&rsquo;ve Read This &rarr;</button>
-    </div>
-  </div>
-</div>
-<!-- Quote Preview Modal -->
-<div class="modal-overlay" id="quoteModal" onclick="if(event.target===this)closeQuoteModal()">
-  <div class="modal">
-    <div class="modal-hdr">
-      <div class="modal-logo"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/logo.png" alt="Round the Clock Notary"></div>
-      <div class="modal-brand">Round the Clock Notary</div>
-      <div class="modal-contact">
-        <span>817-512-7217</span>
-        <span class="modal-contact-dot">&middot;</span>
-        <span><a href="#" id="calc-email-1" style="color:var(--gold-bright);text-decoration:none">roundtheclocknotary@gmail.com</a></span>
-        <span class="modal-contact-dot">&middot;</span>
-        <span>roundtheclocknotary.com</span>
-      </div>
-      <div class="modal-badge" style="margin-top:.75rem">Quote Preview</div>
-      <div class="modal-total-lbl">Estimated Total</div>
-      <div class="modal-total"><sup>$</sup><span id="modalTotal">0.00</span></div>
-    </div>
-    <div class="modal-body">
-      <div class="modal-sec">Quote Details</div>
-      <div id="modalLines"></div>
-      <div class="modal-div"></div>
-      <div class="modal-total-row"><span class="modal-tl">Total</span><span class="modal-tv" id="modalTotalBottom">$0.00</span></div>
-      <div class="modal-total-row"><span class="modal-tl">Deposit Due Now</span><span class="modal-tv" id="modalDeposit">$30.00</span></div>
-      <div class="modal-total-row"><span class="modal-tl">Est. Due at Signing</span><span class="modal-tv gold" id="modalDue">$0.00</span></div>
-      <div class="modal-notice"><strong>Estimate only.</strong> Final charges determined at time of service.</div>
-      <div class="modal-actions">
-        <button class="modal-btn print" onclick="printModalQuote()"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-printer.png" alt=""> Print</button>
-        <button class="modal-btn book-btn" onclick="closeQuoteModal();toggleTab('book')"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-calendar.png" alt=""> Book Now</button>
-        <button class="modal-btn close-btn" onclick="closeQuoteModal()">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Hidden print-only sheet for modal quote -->
-<div class="modal-print-sheet" id="modalPrintSheet" style="display:none !important">
-  <div class="modal-hdr">
-    <div class="modal-logo"><img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/logo.png" alt="Round the Clock Notary"></div>
-    <div class="modal-brand">Round the Clock Notary</div>
-    <div class="modal-contact">
-      <span>817-512-7217</span>
-      <span class="modal-contact-dot">&middot;</span>
-      <span><a href="#" id="calc-email-2" style="color:var(--gold-bright);text-decoration:none">roundtheclocknotary@gmail.com</a></span>
-      <span class="modal-contact-dot">&middot;</span>
-      <span>roundtheclocknotary.com</span>
-    </div>
-    <div class="modal-badge" style="margin-top:.75rem">Quote Preview</div>
-    <div class="modal-total-lbl">Estimated Total</div>
-    <div class="modal-total"><sup>$</sup><span id="modalTotalPrint">0.00</span></div>
-  </div>
-  <div class="modal-body">
-    <div class="modal-sec">Quote Details</div>
-    <div id="modalLinesPrint"></div>
-    <div class="modal-div"></div>
-    <div class="modal-total-row"><span class="modal-tl">Total</span><span class="modal-tv" id="modalTotalBottomPrint">$0.00</span></div>
-    <div class="modal-total-row"><span class="modal-tl">Deposit Due Now</span><span class="modal-tv" id="modalDepositPrint">$30.00</span></div>
-    <div class="modal-total-row"><span class="modal-tl">Est. Due at Signing</span><span class="modal-tv gold" id="modalDuePrint">$0.00</span></div>
-    <div class="modal-notice"><strong>Estimate only.</strong> Final charges determined at time of service.</div>
-  </div>
-</div>
-
-<!-- ── FOOTER ── -->
-<footer>
-  <nav class="footer-nav">
-    <a href="https://www.roundtheclocknotary.com" target="_blank" rel="noopener">Home</a>
-    <div class="footer-nav-dot"></div>
-    <a href="https://www.roundtheclocknotary.com">Free Quote</a>
-    <div class="footer-nav-dot"></div>
-    <a href="https://www.roundtheclocknotary.com">Book Now</a>
-    <div class="footer-nav-dot"></div>
-    <a href="tel:+18175127217">817-512-7217</a>
-    <div class="footer-nav-dot"></div>
-    <a href="#" id="calc-email-3">Email Us</a>
-  </nav>
-  <div class="footer-socials">
-    <a class="footer-social-link" href="https://www.facebook.com/roundtheclocknotary" target="_blank" aria-label="Facebook">
-      <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@HEAD/icon-facebook.png" alt="Facebook" style="width:40px;height:40px;object-fit:contain;display:block;background:transparent;border-radius:50%">
-    </a>
-    <a class="footer-social-link" href="https://www.linkedin.com/company/round-the-clock-notary/" target="_blank" aria-label="LinkedIn">
-      <img src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@HEAD/icon-linkdin.png" alt="LinkedIn" style="width:40px;height:40px;object-fit:contain;display:block;background:transparent;border-radius:50%">
-    </a>
-  </div>
-  <div class="footer-rule"></div>
-  <div class="footer-copy">
-    <span>&copy; 2026 Round The Clock Notary &nbsp;&middot;&nbsp; ByPatience LLC &nbsp;&middot;&nbsp; Hood County, TX</span>
-    <span>Not an attorney. Not legal advice. &nbsp;&middot;&nbsp; Licensed &nbsp;&middot;&nbsp; Bonded &nbsp;&middot;&nbsp; Insured.</span>
+    <p class="footer-copy">&copy; 2026 Round The Clock Notary &middot; ByPatience LLC &middot; Hood County, TX &middot; Not an attorney. Not legal advice. Licensed &middot; Bonded &middot; Insured.</p>
   </div>
 </footer>
 
 <script data-cfasync="false">
-(function(){
+document.addEventListener('DOMContentLoaded', function() {
   var e = 'roundtheclocknotary' + '@' + 'gmail.com';
-  var m = 'mai' + 'lto:' + e;
-  ['calc-email-1','calc-email-2'].forEach(function(id){
-    var el = document.getElementById(id);
-    if(el){ el.href = m; el.textContent = e; }
-  });
-  var e3 = document.getElementById('calc-email-3');
-  if(e3){ e3.href = m; }
-})();
-</script>
-<script>
-
-function openFAQModal(){
-  var overlay=document.getElementById("faqModal");
-  var body=document.getElementById("faqModalBody");
-  var hint=document.getElementById("faqScrollHint");
-  var doneBtn=document.getElementById("faqModalDoneBtn");
-  if(!overlay)return;
-  overlay.classList.add("show");
-  // If already acked, show done state immediately
-  if(S.faqAcked){
-    if(hint)hint.classList.add("hide");
-    if(doneBtn)doneBtn.classList.add("ready");
-    return;
-  }
-  // Reset scroll position and done state
-  if(body)body.scrollTop=0;
-  if(hint)hint.classList.remove("hide");
-  if(doneBtn)doneBtn.classList.remove("ready");
-  // Attach scroll listener
-  if(body){
-    body._faqScrollHandler=function(){
-      var remaining=body.scrollHeight-body.scrollTop-body.clientHeight;
-      if(remaining<=50){
-        // Scrolled to bottom — auto-check
-        S.faqAcked=true;
-        var row=document.getElementById("faqAckRow");
-        if(row)row.classList.add("on");
-        var chk=document.getElementById("faqAckChk");
-        if(chk){chk.style.background="var(--navy)";chk.style.borderColor="var(--navy)";var img=chk.querySelector("img");if(img)img.style.opacity="1";}
-        if(hint)hint.classList.add("hide");
-        if(doneBtn)doneBtn.classList.add("ready");
-        // Unlock next4 if slot also selected
-        var n4=document.getElementById("next4");
-        if(n4){var canContinue=S.faqAcked&&!!S.apptTime;n4.disabled=!canContinue;n4.style.opacity=canContinue?"1":".5";}
-        body.removeEventListener("scroll",body._faqScrollHandler);
+  var fl = document.getElementById('footer-email-link');
+  if (fl) { fl.href = 'mai' + 'lto:' + e; }
+  var al = document.getElementById('accordion-email-link');
+  if (al) { al.href = 'mai' + 'lto:' + e; al.textContent = e; }
+  document.querySelectorAll('.accordion-trigger').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.closest('.accordion-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.accordion-item.open').forEach(function(i) {
+        i.classList.remove('open');
+        i.querySelector('.accordion-trigger').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
       }
-    };
-    body.addEventListener("scroll",body._faqScrollHandler);
-    // Check if content is short enough to not need scrolling
-    setTimeout(function(){
-      if(body.scrollHeight<=body.clientHeight+10){
-        // Content fits — auto-ack immediately
-        body._faqScrollHandler&&body._faqScrollHandler();
-      }
-    },100);
-  }
-}
-
-function closeFAQModal(){
-  var overlay=document.getElementById("faqModal");
-  if(overlay)overlay.classList.remove("show");
-}
-
-var FEDERAL_HOLIDAYS=['2025-01-01','2025-01-20','2025-02-17','2025-05-26','2025-06-19','2025-07-04','2025-09-01','2025-10-13','2025-11-11','2025-11-27','2025-12-25','2026-01-01','2026-01-19','2026-02-16','2026-05-25','2026-06-19','2026-07-04','2026-09-07','2026-10-12','2026-11-11','2026-11-26','2026-12-25','2027-01-01','2027-01-18','2027-02-15','2027-05-31','2027-06-19','2027-07-04','2027-09-06','2027-10-11','2027-11-11','2027-11-25','2027-12-25'];
-var SVC_CODE={second:"SH",minute:"MH",bedside:"BC",closing:"LS"};
-var POS=[{name:"Granbury Post Office",lat:32.447311,lng:-97.786530},{name:"Acton Post Office",lat:32.419700,lng:-97.689700}];
-var SVC={second:{label:"Second Hand",base:30,deposit:30,stateFee:10,duration:30},minute:{label:"Minute Hand",base:30,deposit:30,stateFee:10,duration:45},bedside:{label:"Bedside Clock",base:75,deposit:50,stateFee:0,duration:60},closing:{label:"Closing Table",base:150,deposit:50,stateFee:0,duration:90}};
-var APPS_SCRIPT_URL="https://script.google.com/macros/s/AKfycbym6SCXgNeIVdiy7iU4b1eAYW8sHBL7nQeIH_j4Zqxyn5sAxgRkpAAm8qH85ad7kt4M/exec";
-var GCAL_API_KEY="AIzaSyBaEDQufz1Ipb6Q13frcp5JE8m28RHxfHM";
-var GCAL_ID="rtcnotary1@gmail.com";
-
-var S={step:1,address:"",nearestPO:null,dist:0,isFree:false,isFar:false,travelFee:0,serviceType:null,serviceBase:0,serviceLabel:"",stateFee:0,extraTicks:0,minuteSeals:0,print1:0,print2:0,witness:0,digitalClock:false,timeFlies:false,deliveryMethod:"email",tfDeliveryMethod:"",tfEmail:"",tfFax:"",tfMailName:"",tfMailAddr:"",tfMailCity:"",tfMailState:"",tfMailZip:"",shippingService:"",noteToNotary:"",surcharges:{},deposit:30,clientName:"",clientPhone:"",clientEmail:"",apptDate:"",apptTime:"",apptTimeISO:"",tosAgreed:false,faqAcked:false,depositPaid:false,paypalOrderId:"",gcalEventId:"",bookingId:"",bookingPath:"none",bookingMode:""};
-
-function genBookingId(){var code=SVC_CODE[S.serviceType]||"XX";var now=new Date();return"RTC-"+code+"-"+String(now.getFullYear()).slice(-2)+pad2(now.getMonth()+1)+pad2(now.getDate())+"-"+(Math.floor(Math.random()*900)+100);}
-function fmt(n){return"$"+n.toFixed(2);}
-function pad2(n){return n<10?"0"+n:""+n;}
-function updateDeposit(){if(S.isFar){S.deposit=75;return;}if(S.serviceType)S.deposit=SVC[S.serviceType].deposit;}
-function isHoliday(d){return FEDERAL_HOLIDAYS.indexOf(d)>=0;}
-function distMi(la1,ln1,la2,ln2){var R=3958.8,dLat=(la2-la1)*Math.PI/180,dLng=(ln2-ln1)*Math.PI/180;var a=Math.sin(dLat/2)*Math.sin(dLat/2)+Math.cos(la1*Math.PI/180)*Math.cos(la2*Math.PI/180)*Math.sin(dLng/2)*Math.sin(dLng/2);return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));}
-function calcTotal(){var t=S.travelFee+S.serviceBase+S.stateFee;t+=S.extraTicks*10+S.minuteSeals*10+S.print1+S.print2*1.5+S.witness*20;if(S.digitalClock)t+=5;if(S.timeFlies)t+=5;Object.keys(S.surcharges).forEach(function(k){t+=S.surcharges[k];});return t;}
-
-function buildLines(){var lines=[];
-  if(S.bookingMode==="remote"){lines.push({k:"Remote Online — No Travel",v:"FREE",free:true});}
-  else if(S.isFree)lines.push({k:"Travel — "+S.nearestPO.name,v:"FREE",free:true});
-  else if(S.travelFee>0)lines.push({k:"Hour Hand ("+S.dist.toFixed(1)+" mi RT)",v:fmt(S.travelFee)});
-  if(S.serviceBase>0)lines.push({k:S.serviceLabel,v:fmt(S.serviceBase)});
-  if(S.stateFee>0)lines.push({k:(S.bookingMode==="remote"?"RON Fee":"TX State Fee"),v:fmt(S.stateFee)});
-  if(S.extraTicks>0)lines.push({k:"Extra Ticks ("+S.extraTicks+"x$10)",v:fmt(S.extraTicks*10)});
-  if(S.minuteSeals>0)lines.push({k:"Minute Seals ("+S.minuteSeals+"x$10)",v:fmt(S.minuteSeals*10)});
-  if(S.print1>0)lines.push({k:"Single Print ("+S.print1+" pg)",v:fmt(S.print1)});
-  if(S.print2>0)lines.push({k:"Duplex Print ("+S.print2+" pg)",v:fmt(S.print2*1.5)});
-  if(S.witness>0)lines.push({k:"Witness ("+S.witness+")",v:fmt(S.witness*20)});
-  if(S.digitalClock)lines.push({k:"Digital Clock (E-Notary)",v:fmt(5)});
-  if(S.timeFlies){var dm=S.deliveryMethod==="email"?"Email":S.deliveryMethod==="fax"?"Fax":"Mail";lines.push({k:"Time Flies \u00b7 Delivery ("+dm+")",v:fmt(5)});}
-  var sl={rushhour:"Rush Hour",offclock:"Off the Clock",midnight:"Clock Strikes Midnight",redletter:"Red Letter Day"};
-  Object.keys(S.surcharges).forEach(function(k){lines.push({k:sl[k]||k,v:"+"+fmt(S.surcharges[k])});});
-  return lines;}
-
-function updateRT(){var lines=buildLines();var rtEl=document.getElementById("rtLines");if(rtEl){rtEl.innerHTML=lines.length?lines.map(function(l){return"<div class='rt-line'><span>"+l.k+"</span><span class='rt-val"+(l.free?" free":"")+"'>"+l.v+"</span></div>";}).join(""):"<div class='rt-line'><span style='color:rgba(255,255,255,.28)'>No items yet</span></div>";}var rtNum=document.getElementById("rtTotalNum");if(rtNum)rtNum.textContent=calcTotal().toFixed(2);}
-
-function setBookingMode(mode){
-  S.bookingMode=mode;
-  var ipBtn=document.getElementById("modeInPerson");
-  var rmBtn=document.getElementById("modeRemote");
-  var addrFields=document.getElementById("addrFields");
-  var addrNavBtn=document.getElementById("addrNavBtn");
-  var btnIcon=document.getElementById("addrBtnIcon");
-  var btnLabel=document.getElementById("addrBtnLabel");
-  var travelBox=document.getElementById("travelInfoBox");
-  var ronNotice=document.getElementById("ronNotice");
-  var addrStatus=document.getElementById("addrStatus");
-  if(ipBtn)ipBtn.classList.toggle("sel",mode==="inperson");
-  if(rmBtn)rmBtn.classList.toggle("sel",mode==="remote");
-  if(addrNavBtn)addrNavBtn.style.display="flex";
-  if(mode==="remote"){
-    if(addrFields)addrFields.style.display="none";
-    if(travelBox)travelBox.style.display="none";
-    if(ronNotice)ronNotice.classList.add("show");
-    if(btnIcon)btnIcon.src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon_RON.png";
-    if(btnLabel)btnLabel.innerHTML="Next &rarr;";
-    if(addrStatus){addrStatus.className="addr-status";addrStatus.textContent="";}
-    S.isFree=false;S.isFar=false;S.travelFee=0;S.dist=0;S.nearestPO={name:"Remote Online"};
-    if(S.serviceType&&SVC[S.serviceType]){S.stateFee=(SVC[S.serviceType].stateFee>0)?25:0;}
-    updateDeposit();updateRT();
-  } else {
-    if(addrFields)addrFields.style.display="block";
-    if(travelBox)travelBox.style.display="block";
-    if(ronNotice)ronNotice.classList.remove("show");
-    if(btnIcon)btnIcon.src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-pin.png";
-    if(btnLabel)btnLabel.innerHTML="Find My Location &rarr;";
-    S.isFree=false;S.isFar=false;S.travelFee=0;S.dist=0;S.nearestPO=null;
-    if(S.serviceType&&SVC[S.serviceType]){S.stateFee=SVC[S.serviceType].stateFee;}
-    updateDeposit();updateRT();
-  }
-}
-
-function toggleDigitalClock(){
-  var row=document.getElementById("digitalClockRow");
-  if(row&&row.style.pointerEvents==="none")return;
-  S.digitalClock=!S.digitalClock;
-  if(row)row.classList.toggle("on",S.digitalClock);
-  var price=document.getElementById("digitalClockPrice");
-  if(price)price.textContent=S.digitalClock?"$5.00":"$0.00";
-  updateRT();
-}
-
-function toggleTimeFlies(){
-  S.timeFlies=!S.timeFlies;
-  var row=document.getElementById("timeFlyRow");
-  var price=document.getElementById("timeFlyPrice");
-  if(row)row.classList.toggle("on",S.timeFlies);
-  if(price)price.textContent=S.timeFlies?"$5.00":"$0.00";
-  if(!S.timeFlies){
-    document.querySelectorAll(".method-btn").forEach(function(b){b.classList.remove("sel");});
-    var pn=document.getElementById("postageNotice");if(pn)pn.classList.remove("show");
-    S.deliveryMethod="email";
-  } else {
-    selectDeliveryMethod("email");
-  }
-  updateRT();
-}
-
-function selectDeliveryMethod(method){
-  S.deliveryMethod=method;
-  document.querySelectorAll(".method-btn").forEach(function(b){b.classList.remove("sel");});
-  var btn=document.getElementById("method"+method.charAt(0).toUpperCase()+method.slice(1));
-  if(btn)btn.classList.add("sel");
-  var pn=document.getElementById("postageNotice");
-  if(pn)pn.classList.toggle("show",method==="mail");
-  updateRT();
-}
-
-function showStep(n){document.querySelectorAll(".step").forEach(function(s){s.classList.remove("active");});var el=document.getElementById("step"+n);if(el)el.classList.add("active");S.step=n;var rt=document.getElementById("runningTotal");if(rt)rt.style.display=(n>1&&n<7)?"block":"none";if(n===6)showTFDeliverySection();window.scrollTo({top:0,behavior:"smooth"});}
-
-function toggleTab(which){document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active');});document.querySelectorAll('.tab-content').forEach(function(c){c.classList.remove('active');});var tabBtn=document.getElementById('tab-'+which);var tabContent=document.getElementById('tc-'+which);if(tabBtn)tabBtn.classList.add('active');if(tabContent)tabContent.classList.add('active');S.bookingPath=which;if(which!=='book'){delete S.surcharges.rushhour;delete S.surcharges.offclock;delete S.surcharges.midnight;S.apptTime='';S.apptTimeISO='';}}
-
-function showQuoteModal(){var total=calcTotal(),dep=S.deposit,due=total-dep;var lines=buildLines();var lineHTML=lines.map(function(l){return'<div class="modal-line"><span>'+l.k+'</span><span'+(l.free?' style="color:var(--green)"':'')+'>'+l.v+'</span></div>';}).join('');var ml=document.getElementById('modalLines');if(ml)ml.innerHTML=lineHTML;var mlp=document.getElementById('modalLinesPrint');if(mlp)mlp.innerHTML=lineHTML;function setEl(id,v){var el=document.getElementById(id);if(el)el.textContent=v;}setEl('modalTotal',total.toFixed(2));setEl('modalTotalBottom',fmt(total));setEl('modalDeposit',fmt(dep));setEl('modalDue',fmt(due));setEl('modalTotalPrint',total.toFixed(2));setEl('modalTotalBottomPrint',fmt(total));setEl('modalDepositPrint',fmt(dep));setEl('modalDuePrint',fmt(due));var qm=document.getElementById('quoteModal');if(qm)qm.classList.add('show');}
-function closeQuoteModal(){var qm=document.getElementById('quoteModal');if(qm)qm.classList.remove('show');}
-function printModalQuote(){
-  var total=calcTotal(),dep=S.deposit,due=total-dep;
-  var lines=buildLines();
-  var lineHTML=lines.map(function(l){return'<div class="modal-line"><span>'+l.k+'</span><span'+(l.free?' style="color:var(--green)"':'')+'>'+l.v+'</span></div>';}).join('');
-  function setEl(id,v){var el=document.getElementById(id);if(el)el.textContent=v;}
-  var mlp=document.getElementById('modalLinesPrint');if(mlp)mlp.innerHTML=lineHTML;
-  setEl('modalTotalPrint',total.toFixed(2));
-  setEl('modalTotalBottomPrint',fmt(total));
-  setEl('modalDepositPrint',fmt(dep));
-  setEl('modalDuePrint',fmt(due));
-  var ps=document.getElementById('modalPrintSheet');
-  if(ps)ps.style.removeProperty('display');
-  document.body.classList.add('printing-modal');
-  window.print();
-  document.body.classList.remove('printing-modal');
-  if(ps)ps.style.setProperty('display','none','important');
-}
-
-function getSlotSurcharges(slotDate,bookingTime){var surcharges={};var h=slotDate.getHours();var day=slotDate.getDay();var isWeekend=(day===0||day===6);if(h>=22||h<8)surcharges.midnight=50;if(isWeekend)surcharges.offclock=15;if(!isWeekend&&h>=18&&h<22)surcharges.offclock=15;if(bookingTime&&(slotDate.getTime()-bookingTime.getTime())<=3600000&&slotDate>bookingTime){surcharges.rushhour=100;}return surcharges;}
-
-function handleAddr(){
-  if(S.bookingMode==="remote"){showStep(2);return;}
-  var addr=document.getElementById("addressInput").value.trim();var st=document.getElementById("addrStatus");var btn=document.getElementById("addrNextBtn");
-  if(!addr){st.className="addr-status err";st.textContent="Please enter your address.";return;}
-  btn.disabled=true;var lbl=document.getElementById("addrBtnLabel");if(lbl)lbl.textContent="Looking up...";
-  st.className="addr-status loading";st.textContent="Locating your address...";
-  var HOOD={lat:32.443,lng:-97.771};var addrTX=(addr.toLowerCase().indexOf("tx")<0&&addr.toLowerCase().indexOf("texas")<0)?addr+", TX":addr;
-  function tryPhoton(){return fetch("https://photon.komoot.io/api/?q="+encodeURIComponent(addrTX)+"&limit=3&lang=en").then(function(r){return r.json();}).then(function(d){if(d&&d.features&&d.features.length){var best=null,bd=Infinity;d.features.forEach(function(f){var co=f.geometry.coordinates;var dd=distMi(co[1],co[0],HOOD.lat,HOOD.lng);if(dd<bd){bd=dd;best={lat:co[1],lng:co[0]};}});return best;}return null;}).catch(function(){return null;});}
-  function tryNominatim(){return fetch("https://nominatim.openstreetmap.org/search?q="+encodeURIComponent(addrTX)+"&format=json&limit=3&countrycodes=us",{headers:{"Accept-Language":"en","User-Agent":"RTCNotaryQuote/1.0"}}).then(function(r){return r.json();}).then(function(d){if(d&&d.length){var best=null,bd=Infinity;d.forEach(function(item){var la=parseFloat(item.lat),ln=parseFloat(item.lon);var dd=distMi(la,ln,HOOD.lat,HOOD.lng);if(dd<bd){bd=dd;best={lat:la,lng:ln};}});return best;}return null;}).catch(function(){return null;});}
-  Promise.all([tryPhoton(),tryNominatim()]).then(function(results){
-    var valid=results.filter(Boolean);
-    btn.disabled=false;var lbl2=document.getElementById("addrBtnLabel");if(lbl2)lbl2.innerHTML="Find My Location &rarr;";
-    if(!valid.length){st.className="addr-status err";st.textContent="Address not found. Try: 123 Main St, Granbury TX 76048";return;}
-    valid.sort(function(a,b){return distMi(a.lat,a.lng,HOOD.lat,HOOD.lng)-distMi(b.lat,b.lng,HOOD.lat,HOOD.lng);});
-    var c=valid[0];var nearest=null,nd=Infinity;
-    POS.forEach(function(p){var d=distMi(c.lat,c.lng,p.lat,p.lng);if(d<nd){nd=d;nearest=p;}});
-    S.address=addr;S.nearestPO=nearest;S.dist=nd;S.isFree=nd<=5;S.isFar=nd>20;
-    if(S.isFree){S.travelFee=0;}else if(S.isFar){S.travelFee=Math.round(nd*2*0.725*100)/100;}else{var bm=Math.max(0,nd-5);S.travelFee=Math.round(bm*2*0.725*100)/100;if(S.travelFee===0)S.isFree=true;}
-    updateDeposit();
-    if(S.isFree)st.className="addr-status ok",st.textContent="Free travel zone — within 5 miles of "+nearest.name+"!";
-    else if(S.isFar)st.className="addr-status ok",st.textContent="Located · "+nd.toFixed(1)+" mi · Travel: "+fmt(S.travelFee)+" · Long distance deposit: $75.00";
-    else st.className="addr-status ok",st.textContent="Located · "+nd.toFixed(1)+" mi from "+nearest.name+" · Travel: "+fmt(S.travelFee)+" (first 5 mi free)";
-    updateRT();setTimeout(function(){showStep(2);},900);
-  });}
-
-function handleSvc(type){document.querySelectorAll(".opt-btn").forEach(function(b){b.classList.remove("sel");});var btn=document.querySelector(".opt-btn[data-service='"+type+"']");if(btn)btn.classList.add("sel");var svc=SVC[type];S.serviceType=type;S.serviceBase=svc.base;S.serviceLabel=svc.label;S.stateFee=(S.bookingMode==="remote"&&svc.stateFee>0)?25:svc.stateFee;updateDeposit();S.extraTicks=0;S.minuteSeals=0;["extraTicks","minuteSeals"].forEach(function(t){var v=document.getElementById(t+"Val");if(v)v.textContent="0";var p=document.getElementById(t+"Price");if(p)p.textContent="$0.00";});var isSecond=type==="second",isMinute=type==="minute";var etRow=document.getElementById("extraTicksRow");if(etRow)etRow.style.display=(isSecond||isMinute)?"flex":"none";var msRow=document.getElementById("minuteSealsRow");if(msRow)msRow.style.display=isMinute?"flex":"none";
-  var sub=document.getElementById("step3Sub");if(sub)sub.textContent=isMinute?"All add-ons available.":(isSecond?"Add-ons plus Extra Ticks available.":"Add-ons 1\u20133 available.");
-  var isClosing=type==="closing";
-  var dcRow=document.getElementById("digitalClockRow");
-  var ronBadge=document.getElementById("ronBadge");
-  var dcSub=document.getElementById("digitalClockSub");
-  if(dcRow){if(isClosing){dcRow.style.opacity=".38";dcRow.style.pointerEvents="none";if(ronBadge)ronBadge.style.display="inline";if(dcSub)dcSub.textContent="Not available for Closing Table \u2014 RON requires lender authorization.";if(S.digitalClock){S.digitalClock=false;dcRow.classList.remove("on");var dp=document.getElementById("digitalClockPrice");if(dp)dp.textContent="$0.00";}}else{dcRow.style.opacity="1";dcRow.style.pointerEvents="auto";if(ronBadge)ronBadge.style.display="none";if(dcSub)dcSub.textContent="$5.00 flat \u2014 electronic signature on your document";}}
-  updateRT();}
-
-function handleCounter(target,dir){var valEl=document.getElementById(target+"Val");var priceEl=document.getElementById(target+"Price");if(!valEl||!priceEl)return;var cur=Math.max(0,(parseInt(valEl.textContent)||0)+dir);valEl.textContent=cur;S[target]=cur;var prices={extraTicks:10,minuteSeals:10,print1:1.0,print2:1.5,witness:20};var row=document.getElementById(target+"Row");if(row)row.classList.toggle("on",cur>0);priceEl.textContent=fmt(cur*prices[target]);updateRT();}
-
-function initDatePicker(){var d=new Date();var min=d.getFullYear()+"-"+pad2(d.getMonth()+1)+"-"+pad2(d.getDate());var inp=document.getElementById("apptDate");if(inp){inp.min=min;if(!inp.value)inp.value=min;}}
-
-function loadAvailableSlots(){var dateEl=document.getElementById("apptDate");var slotErrEl=document.getElementById("slotError");var slotsEl=document.getElementById("slotsList");if(!dateEl||!slotsEl)return;var date=dateEl.value;if(!date){if(slotErrEl){slotErrEl.style.display="block";slotErrEl.textContent="Please select a date.";}return;}if(isHoliday(date)){if(!confirm("This date is a federal holiday (Red Letter Day). An additional +$50 fee will apply. Continue?")){return;}S.surcharges.redletter=50;updateRT();}else{delete S.surcharges.redletter;updateRT();}if(slotErrEl)slotErrEl.style.display="none";slotsEl.innerHTML="<div style='font-size:.82rem;color:var(--muted)'>Checking availability...</div>";fetch("https://www.googleapis.com/calendar/v3/freeBusy?key="+GCAL_API_KEY,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({timeMin:date+"T00:00:00-05:00",timeMax:date+"T23:59:59-05:00",items:[{id:GCAL_ID}]})}).then(function(r){return r.json();}).then(function(data){var busy=[];if(data.calendars&&data.calendars[GCAL_ID]&&data.calendars[GCAL_ID].busy)busy=data.calendars[GCAL_ID].busy;renderSlots(date,busy);}).catch(function(){renderSlots(date,[]);});}
-
-function getSlotTier(s){var h=s.getHours(),day=s.getDay(),isWeekend=(day===0||day===6);if(h>=22||h<8)return"late";if(isWeekend||h>=18)return"evening";return"standard";}
-function isRushHour(s){var now=new Date(),diff=s.getTime()-now.getTime();return diff>=0&&diff<=3600000;}
-
-function renderSlots(date,busyPeriods){var slotsEl=document.getElementById("slotsList");var lateEl=document.getElementById("lateNightNotice");if(!slotsEl)return;var duration=(S.serviceType&&SVC[S.serviceType])?SVC[S.serviceType].duration:60;if(S.isFar)duration+=30;var slots=[],hasLate=false;for(var h=0;h<24;h++){for(var m=0;m<60;m+=30){var slotStart=new Date(date+"T"+pad2(h)+":"+pad2(m)+":00");var slotEnd=new Date(slotStart.getTime()+duration*60000);var now=new Date();var isBusy=busyPeriods.some(function(b){var bs=new Date(b.start),be=new Date(b.end);return slotStart<be&&slotEnd>bs;});var isPast=slotStart<=now;if(!isBusy&&!isPast)slots.push(slotStart);}}if(!slots.length){slotsEl.innerHTML="<div style='font-size:.82rem;color:var(--muted)'>No available times on this date.</div>";return;}slotsEl.innerHTML=slots.map(function(s){var label=s.toLocaleTimeString("en-US",{hour:"numeric",minute:"2-digit",hour12:true});var iso=s.toISOString();var tier=getSlotTier(s);if(tier==="late")hasLate=true;var rush=isRushHour(s);var extra=rush?" <small style='font-size:.65rem;opacity:.8'>(+$100)</small>":"";return"<button class='slot-btn "+tier+"' data-iso='"+iso+"' data-label='"+label+"' data-tier='"+tier+"' data-rush='"+rush+"'>"+label+extra+"</button>";}).join("");if(lateEl)lateEl.style.display=hasLate?"block":"none";var rushNotice=document.getElementById("rushNotice");var hasRush=slots.some(function(s){return isRushHour(s);});if(rushNotice)rushNotice.style.display=hasRush?"flex":"none";}
-
-function selectSlot(isoTime,label,tier,isRush,btn){document.querySelectorAll(".slot-btn").forEach(function(b){b.classList.remove("sel");});btn.classList.add("sel");S.apptTimeISO=isoTime;S.apptTime=label;var dateStr=document.getElementById("apptDate").value;S.apptDate=new Date(dateStr+"T12:00:00").toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric",year:"numeric"});delete S.surcharges.rushhour;delete S.surcharges.offclock;delete S.surcharges.midnight;var slotDate=new Date(isoTime);var stackedSurcharges=getSlotSurcharges(slotDate,new Date());Object.assign(S.surcharges,stackedSurcharges);updateDeposit();updateRT();var disp=document.getElementById("selectedSlotDisplay");if(disp)disp.style.display="flex";var txt=document.getElementById("selectedSlotText");if(txt)txt.textContent="Selected: "+S.apptDate+" at "+label+(isRush?" (Rush Hour +$100)":"");var n4=document.getElementById("next4");if(n4){var canContinue=S.faqAcked;n4.disabled=!canContinue;n4.style.opacity=canContinue?"1":".5";}}
-
-function validateStep6(){var name=document.getElementById("clientName").value.trim();var phone=document.getElementById("clientPhone").value.trim();var email=document.getElementById("clientEmail").value.trim();var ok=true;function setStatus(id,cls,msg){var el=document.getElementById(id);if(el){el.className="addr-status"+cls;el.textContent=msg;}}if(!name){setStatus("nameStatus"," err","Name is required.");ok=false;}else{setStatus("nameStatus","","");}if(!phone){setStatus("phoneStatus"," err","Phone is required.");ok=false;}else{setStatus("phoneStatus","","");}if(!email||email.indexOf("@")<0){setStatus("emailStatus"," err","Valid email is required.");ok=false;}else{setStatus("emailStatus","","");}if(!S.tosAgreed){alert("Please agree to the Terms of Service to continue.");ok=false;}if(S.timeFlies){if(!S.tfDeliveryMethod){alert("Please select a delivery method for your Time Flies document delivery.");ok=false;}else if(S.tfDeliveryMethod==="email"){var tfe=document.getElementById("tfEmail");var tfev=tfe?tfe.value.trim():"";if(!tfev||tfev.indexOf("@")<0){setStatus("tfEmailStatus"," err","Valid delivery email is required.");ok=false;}else{setStatus("tfEmailStatus","","");S.tfEmail=tfev;}}else if(S.tfDeliveryMethod==="fax"){var tff=document.getElementById("tfFax");var tffv=tff?tff.value.replace(/\D/g,""):"";if(tffv.length<10){setStatus("tfFaxStatus"," err","Valid fax number is required (10 digits).");ok=false;}else{setStatus("tfFaxStatus","","");S.tfFax=tff.value.trim();}}else if(S.tfDeliveryMethod==="mail"){var mn=document.getElementById("tfMailName");var ma=document.getElementById("tfMailAddr");var mc=document.getElementById("tfMailCity");var ms=document.getElementById("tfMailState");var mz=document.getElementById("tfMailZip");var mnv=mn?mn.value.trim():"";var mav=ma?ma.value.trim():"";var mcv=mc?mc.value.trim():"";var msv=ms?ms.value.trim():"";var mzv=mz?mz.value.trim():"";if(!mnv||!mav||!mcv||!msv||!mzv){setStatus("tfMailStatus"," err","All mailing address fields are required.");ok=false;}else if(!S.shippingService){setStatus("tfMailStatus"," err","Please select a shipping method.");ok=false;}else{setStatus("tfMailStatus","","");S.tfMailName=mnv;S.tfMailAddr=mav;S.tfMailCity=mcv;S.tfMailState=msv;S.tfMailZip=mzv;}}}if(ok){S.clientName=name;S.clientPhone=phone;S.clientEmail=email;}return ok;}
-
-function buildPaymentStep(){var total=calcTotal(),dep=S.deposit,due=total-dep;function set(id,v){var el=document.getElementById(id);if(el)el.textContent=v;}var psl=document.getElementById("paymentSummaryLines");if(psl)psl.innerHTML=buildLines().map(function(l){return"<div class='rt-line'><span>"+l.k+"</span><span class='rt-val"+(l.free?" free":"")+"'>"+l.v+"</span></div>";}).join("");set("paymentTotal",total.toFixed(2));set("paymentDepositAmt",fmt(dep));set("paymentDueAmt",fmt(due));set("mockDepositLabel",fmt(dep));var atd=document.getElementById("apptTimeDisplay");if(atd)atd.textContent=S.apptDate?(S.apptDate+" at "+S.apptTime):"Free Quote — No specific time selected";var ldn=document.getElementById("longDistNotice");if(ldn)ldn.style.display=S.isFar?"block":"none";var ppContainer=document.getElementById("paypal-button-container");var mockBtn=document.getElementById("paypalMockBtn");if(ppContainer)ppContainer.innerHTML="";if(window.paypal&&ppContainer&&mockBtn){mockBtn.style.display="none";ppContainer.style.display="block";window.paypal.Buttons({style:{layout:"vertical",color:"blue",shape:"rect",label:"pay"},createOrder:function(data,actions){return actions.order.create({purchase_units:[{description:"Round the Clock Notary — Appointment Deposit",amount:{value:dep.toFixed(2),currency_code:"USD"}}]});},onApprove:function(data,actions){return actions.order.capture().then(function(details){S.depositPaid=true;S.paypalOrderId=details.id;S.bookingId=genBookingId();logBooking();buildStep8();showStep(8);});},onError:function(){alert("Payment error. Please try again or call 817-512-7217.");}}).render("#paypal-button-container");}else{if(ppContainer)ppContainer.style.display="none";if(mockBtn)mockBtn.style.display="block";}}
-
-function handleMockPayment(){S.depositPaid=true;S.paypalOrderId="MOCK-"+Date.now();S.bookingId=genBookingId();logBooking();buildStep8();showStep(8);}
-
-function buildStep8(){function set(id,v){var el=document.getElementById(id);if(el)el.textContent=v;}set("tyName",S.clientName.split(" ")[0]);set("tyBookingId","Booking #: "+S.bookingId);set("tyApptVal",S.apptDate?(S.apptDate+" at "+S.apptTime):"Free Quote");set("tyServiceVal",S.serviceLabel+" · "+((S.serviceType&&SVC[S.serviceType])?SVC[S.serviceType].duration:60)+" min appointment");set("tyBookingIdAppt",S.bookingId);var total=calcTotal(),dep=S.deposit,due=total-dep;set("sumTotal8",fmt(total));set("sumDepositPaid8",fmt(dep)+" (Paid)");set("sumDue8",fmt(due));var sl8=document.getElementById("sumLines8");if(sl8)sl8.innerHTML=buildLines().map(function(l){return"<div class='sum-line'><span class='sum-key'>"+l.k+"</span><span class='sum-val"+(l.free?" free":"")+"'>"+l.v+"</span></div>";}).join("");}
-
-function logBooking(){
-  var zone=S.bookingMode==="remote"?"Remote Online":(S.isFree?"Free Zone":(S.isFar?"Long Distance":"Standard"));
-  var total=calcTotal();
-  var nn=document.getElementById("noteNotary");var noteVal=nn?nn.value.trim():"";
-  var surchargeList=[];
-  var surchargeLabels={rushhour:"Rush Hour (+$100)",offclock:"Off the Clock (+$15)",midnight:"Clock Strikes Midnight (+$50)",redletter:"Red Letter Day (+$50)"};
-  Object.keys(S.surcharges).forEach(function(k){surchargeList.push(surchargeLabels[k]||k);});
-  var mailFull=S.tfMailName?(S.tfMailName+(S.tfMailAddr?", "+S.tfMailAddr:"")+(S.tfMailCity?", "+S.tfMailCity:"")+(S.tfMailState?" "+S.tfMailState:"")+(S.tfMailZip?" "+S.tfMailZip:"")):"";
-  fetch(APPS_SCRIPT_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({
-    bookingId:S.bookingId,
-    clientName:S.clientName,
-    clientPhone:S.clientPhone,
-    clientEmail:S.clientEmail,
-    address:S.bookingMode==="remote"?"Remote Online":S.address,
-    serviceLabel:S.serviceLabel,
-    apptDate:S.apptDate,
-    apptTime:S.apptTime,
-    apptTimeISO:S.apptTimeISO,
-    durationMinutes:(S.serviceType&&SVC[S.serviceType])?SVC[S.serviceType].duration:60,
-    miles:S.dist.toFixed(1),
-    zone:zone,
-    total:fmt(total),
-    depositPaid:fmt(S.deposit),
-    dueAtSigning:fmt(total-S.deposit),
-    paypalOrderId:S.paypalOrderId,
-    gcalEventId:S.gcalEventId,
-    bookingMode:S.bookingMode,
-    addonWitness:S.witness,
-    addonExtraTicks:S.extraTicks,
-    addonMinuteSeals:S.minuteSeals,
-    addonPrint1:S.print1,
-    addonPrint2:S.print2,
-    digitalClock:S.digitalClock?"Yes":"No",
-    timeFlies:S.timeFlies?"Yes":"No",
-    deliveryMethod:S.timeFlies?S.tfDeliveryMethod:"",
-    deliveryEmail:S.tfDeliveryMethod==="email"?S.tfEmail:"",
-    deliveryFax:S.tfDeliveryMethod==="fax"?S.tfFax:"",
-    deliveryMailFull:S.tfDeliveryMethod==="mail"?mailFull:"",
-    deliveryMailName:S.tfMailName||"",
-    deliveryMailAddr:S.tfMailAddr||"",
-    deliveryMailCity:S.tfMailCity||"",
-    deliveryMailState:S.tfMailState||"",
-    deliveryMailZip:S.tfMailZip||"",
-    shippingService:S.shippingService||"",
-    surcharges:surchargeList.join("; ")||"None",
-    noteToNotary:noteVal,
-    tosAgreed:S.tosAgreed?"Yes":"No",
-    faqAcked:S.faqAcked?"Yes":"No",
-    bookingPath:S.bookingPath||"book",
-    baseFee:S.serviceBase,
-    stateFee:S.stateFee,
-    travelFee:S.travelFee,
-    addonsTotal:Math.round((S.extraTicks*10+S.minuteSeals*10+S.print1+S.print2*1.5+S.witness*20+(S.digitalClock?5:0)+(S.timeFlies?5:0))*100)/100,
-    surchargesTotal:Math.round(Object.values(S.surcharges).reduce(function(a,b){return a+b;},0)*100)/100
-  })}).catch(function(){});
-}
-
-function showTFDeliverySection(){
-  var sec=document.getElementById("tfDeliverySection");
-  if(sec)sec.style.display=S.timeFlies?"block":"none";
-}
-
-function selectTFMethod(method){
-  S.tfDeliveryMethod=method;
-  document.querySelectorAll(".tf-method-btn").forEach(function(b){b.classList.remove("sel");});
-  var bringRow=document.getElementById("tfBringRow");
-  var emailFields=document.getElementById("tfEmailFields");
-  var faxFields=document.getElementById("tfFaxFields");
-  var mailFields=document.getElementById("tfMailFields");
-  if(bringRow)bringRow.classList.remove("sel");
-  if(emailFields)emailFields.classList.remove("show");
-  if(faxFields)faxFields.classList.remove("show");
-  if(mailFields)mailFields.classList.remove("show");
-  if(method==="email"){
-    var eb=document.getElementById("tfBtnEmail");if(eb)eb.classList.add("sel");
-    if(emailFields)emailFields.classList.add("show");
-  } else if(method==="fax"){
-    var fb=document.getElementById("tfBtnFax");if(fb)fb.classList.add("sel");
-    if(faxFields)faxFields.classList.add("show");
-  } else if(method==="mail"){
-    var mb=document.getElementById("tfBtnMail");if(mb)mb.classList.add("sel");
-    if(mailFields)mailFields.classList.add("show");
-  } else if(method==="bring"){
-    if(bringRow)bringRow.classList.add("sel");
-  }
-}
-
-function selectShipping(el,service){
-  document.querySelectorAll(".ship-card").forEach(function(c){c.classList.remove("sel");});
-  el.classList.add("sel");
-  S.shippingService=service;
-}
-
-function selectRange(el,key,amt){document.querySelectorAll(".range-card").forEach(function(c){c.classList.remove("sel");});el.classList.add("sel");delete S.surcharges.offclock;delete S.surcharges.midnight;if(amt>0)S.surcharges[key]=amt;updateDeposit();updateRT();}
-
-function startOver(){
-  S={step:1,address:"",nearestPO:null,dist:0,isFree:false,isFar:false,travelFee:0,serviceType:null,serviceBase:0,serviceLabel:"",stateFee:0,extraTicks:0,minuteSeals:0,print1:0,print2:0,witness:0,digitalClock:false,timeFlies:false,deliveryMethod:"email",surcharges:{},deposit:30,clientName:"",clientPhone:"",clientEmail:"",apptDate:"",apptTime:"",apptTimeISO:"",tosAgreed:false,faqAcked:false,depositPaid:false,paypalOrderId:"",gcalEventId:"",bookingId:"",bookingPath:"none",bookingMode:""};
-  function clr(id){var el=document.getElementById(id);if(el)el.value="";}
-  function txt(id,v){var el=document.getElementById(id);if(el)el.textContent=v;}
-  function cls(id,c){var el=document.getElementById(id);if(el)el.className=c;}
-  clr("addressInput");clr("clientName");clr("clientPhone");clr("clientEmail");
-  cls("addrStatus","addr-status");txt("addrStatus","");
-  ["nameStatus","phoneStatus","emailStatus"].forEach(function(id){cls(id,"addr-status");txt(id,"");});
-  document.querySelectorAll(".opt-btn").forEach(function(b){b.classList.remove("sel");});
-  ["extraTicks","minuteSeals","print1","print2","witness"].forEach(function(t){txt(t+"Val","0");txt(t+"Price","$0.00");var row=document.getElementById(t+"Row");if(row)row.classList.remove("on");});
-  var tar=document.getElementById("tosAgreeRow");if(tar)tar.classList.remove("on");
-  var n6=document.getElementById("next6");if(n6){n6.disabled=true;n6.style.opacity=".5";}
-  var n4=document.getElementById("next4");if(n4){n4.disabled=true;n4.style.opacity=".5";}
-  var ssd=document.getElementById("selectedSlotDisplay");if(ssd)ssd.style.display="none";
-  var sl=document.getElementById("slotsList");if(sl)sl.innerHTML="";
-  var faqRow=document.getElementById("faqAckRow");if(faqRow)faqRow.classList.remove("on");
-  var faqChk=document.getElementById("faqAckChk");if(faqChk){faqChk.style.background="";faqChk.style.borderColor="";var img=faqChk.querySelector("img");if(img)img.style.opacity="0";}
-  var faqBody=document.getElementById("faqModalBody");if(faqBody&&faqBody._faqScrollHandler){faqBody.removeEventListener("scroll",faqBody._faqScrollHandler);}
-  closeFAQModal();
-  var pb=document.getElementById("printBtn8");if(pb){pb.disabled=false;pb.style.opacity="1";}
-  var sb=document.getElementById("startOverBtn");if(sb){sb.disabled=false;sb.style.opacity="1";}
-  // Reset Time Flies delivery fields
-  var tfd=document.getElementById("tfDeliverySection");if(tfd)tfd.style.display="none";
-  ["tfEmail","tfFax","tfMailName","tfMailAddr","tfMailCity","tfMailState","tfMailZip"].forEach(function(id){var el=document.getElementById(id);if(el)el.value="";});
-  ["tfBtnEmail","tfBtnFax","tfBtnMail"].forEach(function(id){var el=document.getElementById(id);if(el)el.classList.remove("sel");});
-  var tfBring=document.getElementById("tfBringRow");if(tfBring)tfBring.classList.remove("sel");
-  var tfEF=document.getElementById("tfEmailFields");if(tfEF)tfEF.classList.remove("show");
-  var tfMF=document.getElementById("tfMailFields");if(tfMF)tfMF.classList.remove("show");
-  document.querySelectorAll(".ship-card").forEach(function(c){c.classList.remove("sel");});
-  ["tfEmailStatus","tfMailStatus"].forEach(function(id){var el=document.getElementById(id);if(el){el.className="addr-status";el.textContent="";}});
-  // Reset Note to Notary
-  var nn=document.getElementById("noteNotary");if(nn)nn.value="";
-  var nc=document.getElementById("noteNotaryCount");if(nc)nc.textContent="0";
-  document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active');});
-  document.querySelectorAll('.tab-content').forEach(function(c){c.classList.remove('active');});
-  // Reset mode toggle
-  var ipBtn=document.getElementById("modeInPerson");if(ipBtn)ipBtn.classList.remove("sel");
-  var rmBtn=document.getElementById("modeRemote");if(rmBtn)rmBtn.classList.remove("sel");
-  var addrFields=document.getElementById("addrFields");if(addrFields)addrFields.style.display="none";
-  var addrNavBtn=document.getElementById("addrNavBtn");if(addrNavBtn)addrNavBtn.style.display="none";
-  var travelBox=document.getElementById("travelInfoBox");if(travelBox)travelBox.style.display="none";
-  var ronNotice=document.getElementById("ronNotice");if(ronNotice)ronNotice.classList.remove("show");
-  var btnIcon=document.getElementById("addrBtnIcon");if(btnIcon)btnIcon.src="https://cdn.jsdelivr.net/gh/laceesharee/quote-booking@main/icon-pin.png";
-  var btnLabel=document.getElementById("addrBtnLabel");if(btnLabel)btnLabel.innerHTML="Find My Location &rarr;";
-  // Reset Digital Clock and Time Flies
-  var dcRow=document.getElementById("digitalClockRow");if(dcRow){dcRow.classList.remove("on");dcRow.style.opacity="1";dcRow.style.pointerEvents="auto";}
-  var dcPrice=document.getElementById("digitalClockPrice");if(dcPrice)dcPrice.textContent="$0.00";
-  var ronBadge=document.getElementById("ronBadge");if(ronBadge)ronBadge.style.display="none";
-  var dcSub=document.getElementById("digitalClockSub");if(dcSub)dcSub.textContent="$5.00 flat \u2014 electronic signature on your document";
-  var tfRow=document.getElementById("timeFlyRow");if(tfRow)tfRow.classList.remove("on");
-  var tfPrice=document.getElementById("timeFlyPrice");if(tfPrice)tfPrice.textContent="$0.00";
-  document.querySelectorAll(".method-btn").forEach(function(b){b.classList.remove("sel");});
-  var pn=document.getElementById("postageNotice");if(pn)pn.classList.remove("show");
-  var lf=document.getElementById("leadContactForm");if(lf){lf.style.display="none";}
-  var ln=document.getElementById("leadName");if(ln)ln.value="";
-  var le=document.getElementById("leadEmail");if(le)le.value="";
-  var lm=document.getElementById("leadMsg");if(lm)lm.value="";
-  var ls=document.getElementById("leadStatus");if(ls)ls.style.display="none";
-  showStep(1);
-}
-
-function loadPayPalSDK(cb){if(window.paypal){cb();return;}var s=document.createElement("script");s.src="https://www.paypal.com/sdk/js?client-id=AVSw_Z_wHbrF7Ldula64ka2HcQgWRsRWG3cykmyz8c1t84AmdfnUtmhVFAHghCiIt0a5wbnuVpEPZ1by&currency=USD&components=buttons";s.onload=cb;document.head.appendChild(s);}
-
-document.addEventListener("DOMContentLoaded",function(){
-  function on(id,ev,fn){var el=document.getElementById(id);if(el)el.addEventListener(ev,fn);}
-  on("addrNextBtn","click",handleAddr);
-  on("addressInput","keydown",function(e){if(e.key==="Enter")handleAddr();});
-  document.querySelectorAll(".opt-btn").forEach(function(b){b.addEventListener("click",function(){handleSvc(this.dataset.service);});});
-  on("back2","click",function(){showStep(1);});
-  on("next2","click",function(){if(!S.serviceType){alert("Please select a service to continue.");return;}showStep(3);});
-  document.querySelectorAll(".ctr-btn").forEach(function(b){b.addEventListener("click",function(){handleCounter(this.dataset.target,parseInt(this.dataset.dir));});});
-  on("back3","click",function(){showStep(2);});
-  on("next3","click",function(){initDatePicker();showStep(4);});
-  on("checkAvailBtn","click",loadAvailableSlots);
-  on("apptDate","change",function(){S.apptTime="";S.apptTimeISO="";delete S.surcharges.rushhour;delete S.surcharges.offclock;delete S.surcharges.midnight;var ssd=document.getElementById("selectedSlotDisplay");if(ssd)ssd.style.display="none";var sl=document.getElementById("slotsList");if(sl)sl.innerHTML="";var n4=document.getElementById("next4");if(n4){n4.disabled=true;n4.style.opacity=".5";}});
-  on("slotsList","click",function(e){var btn=e.target.closest(".slot-btn");if(!btn)return;selectSlot(btn.dataset.iso,btn.dataset.label,btn.dataset.tier,btn.dataset.rush==="true",btn);});
-  on("back4","click",function(){showStep(3);});
-  on("next4","click",function(){if(!S.apptTime){alert("Please select an appointment time.");return;}showStep(6);});
-  on("tosAgreeRow","click",function(){S.tosAgreed=!S.tosAgreed;this.classList.toggle("on",S.tosAgreed);var n6=document.getElementById("next6");if(n6){n6.disabled=!S.tosAgreed;n6.style.opacity=S.tosAgreed?"1":".5";}});
-  on("back6","click",function(){showStep(4);});
-  on("next6","click",function(){if(!validateStep6())return;buildPaymentStep();loadPayPalSDK(function(){buildPaymentStep();});showStep(7);});
-  on("back7","click",function(){showStep(6);});
-  on("paypalMockBtn","click",handleMockPayment);
-  // faqAckRow is now handled by FAQ modal scroll — no manual click
-  // Note to Notary character counter
-  on("noteNotary","input",function(){var len=this.value.length;var ctr=document.getElementById("noteNotaryCount");if(ctr){ctr.textContent=len;ctr.parentElement.classList.toggle("warn",len>450);}});
-  // FAQ modal click-outside-to-close
-  var faqOverlay=document.getElementById("faqModal");
-  if(faqOverlay)faqOverlay.addEventListener("click",function(e){if(e.target===this)closeFAQModal();});
-  // printBtn8 and startOverBtn have inline onclick handlers
-  on("leadContactBtn","click",function(){var form=document.getElementById("leadContactForm");if(form){form.style.display=form.style.display==="none"?"block":"none";}});
-  on("leadSubmitBtn","click",function(){
-    var name=document.getElementById("leadName").value.trim();
-    var email=document.getElementById("leadEmail").value.trim();
-    var msg=document.getElementById("leadMsg").value.trim();
-    var st=document.getElementById("leadStatus");
-    if(!name||!email||email.indexOf("@")<0){if(st){st.style.display="block";st.textContent="Please enter your name and a valid email.";}return;}
-    var total=calcTotal();
-    fetch(APPS_SCRIPT_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({action:"leadCapture",clientName:name,clientEmail:email,message:msg,serviceLabel:S.serviceLabel||"Not selected",estimatedTotal:fmt(total),address:S.address||"Not provided"})}).catch(function(){});
-    var form=document.getElementById("leadContactForm");
-    if(form)form.innerHTML="<div style=\"padding:1rem;text-align:center\"><div style=\"font-family:Cinzel,serif;font-size:.82rem;font-weight:700;color:var(--green);\">Thank you! We'll be in touch shortly.<\/div><\/div>";if(st)st.style.display="none";
+    });
   });
 });
 </script>
+
 </body>
 </html>
